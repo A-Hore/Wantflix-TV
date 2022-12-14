@@ -5,7 +5,13 @@ const { currentRouter } = require("./Routes/current.router");
 require("dotenv").config();
 
 const app = express();
-app.listen(8080, async () => {
+app.use(express.json());
+
+app.get("/", async (req, res) => {
+  res.send("homepage");
+});
+
+app.listen(process.env.PORT, async () => {
   try {
     await connection;
 
@@ -16,7 +22,9 @@ app.listen(8080, async () => {
     console.log(err);
   }
 });
-app.get("/", async (req, res) => {
-  res.send("homepage");
-});
-app.use("/movies", currentRouter);
+
+
+
+// ALL ROUTES
+
+app.use("/current", currentRouter);
