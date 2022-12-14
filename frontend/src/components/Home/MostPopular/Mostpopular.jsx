@@ -46,21 +46,6 @@ export default class Responsive extends Component {
           <div>
             <h3>Trending</h3>
           </div>
-          <div>
-            <h3>news</h3>
-          </div>
-          <div>
-            <h3>for</h3>
-          </div>
-          <div>
-            <h3>you</h3>
-          </div>
-          <div>
-            <h3>do render</h3>
-          </div>
-          <div>
-            <h3>todat</h3>
-          </div>
         </Slider>
       </div>
     );
