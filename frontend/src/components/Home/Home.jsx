@@ -3,6 +3,9 @@ import AutoPlay from "./HomepageSlider";
 // import Responsive from "./MostPopular/Mostpopular";
 import "./Home.css";
 import Trending from "./Trending";
+
+import Homec from "../../Dibyanshu/components/Home1/Homec";
+
 const Home = () => {
   return (
     <div>
@@ -10,6 +13,8 @@ const Home = () => {
       <AutoPlay />
       <Trending />
       {/* <Responsive /> */}
+
+      <Homec/>
     </div>
   );
 };
