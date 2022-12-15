@@ -13,6 +13,7 @@ const Home = () => {
   return (
     <div>
       <AutoPlay />
+    
       <Trending />
       <Popular />
       <CurrentData />

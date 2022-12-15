@@ -1,25 +1,25 @@
 .TrendingDiv {
   /* border: 1px solid red; */
-  background-color: rgba(0, 0, 0, 0.646);
+  background-color: whitesmoke;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 40px;
+  gap: 21px;
   padding: 25px;
   color: white;
 }
 .TrendingDiv > div > img {
-  border-radius: 10%;
+  border-radius: 4%;
   /* border: 1px solid red; */
-  height: 180px;
+  height: 160px;
   width: 1000px;
 }
 .Watchfree {
-  font-size: 25px;
+  font-size: 15px;
   display: flex;
   justify-content: flex-start;
   margin-left: 2%;
   margin-bottom: 10px;
   color: black;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: sans-serif;
+  font-weight: bold;
 }

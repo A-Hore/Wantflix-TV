@@ -12,7 +12,7 @@ const Original = () => {
   }, [dispatch]);
   return (
     <>
-      <h1 className="Watchfree">Watch Original for Free</h1>
+      <h1 className="Watchfree">Latest Originals</h1>
       <hr />
       <div className="TrendingDiv">
         {isLoading && <h1>Loading....</h1>}

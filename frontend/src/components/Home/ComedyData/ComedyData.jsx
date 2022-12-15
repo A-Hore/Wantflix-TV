@@ -12,7 +12,7 @@ const ComedyData = () => {
   }, [dispatch]);
   return (
     <>
-      <h1 className="Watchfree">ALL COMEDY SERIES</h1>
+      <h1 className="Watchfree">All Comedy series</h1>
       <div className="TrendingDiv">
         {isLoading && <h1>Loading....</h1>}
         {Comedy_data.length > 0 &&
