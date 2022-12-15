@@ -5,6 +5,7 @@ const initialState = {
   Trending: [],
   Current: [],
   Comedy: [],
+  Featured: [],
   isLoading: false,
   isError: false,
 };
@@ -66,6 +67,24 @@ const reducer = (state = initialState, action) => {
         isLoading: false,
         isError: true,
         Comedy: [],
+      };
+    case types.GET_FEATURED_DATA_REQUEST:
+      return {
+        ...state,
+        isLoading: true,
+      };
+    case types.GET_FEATURED_DATA_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        Featured: payload,
+      };
+    case types.GET_FEATURED_DATA_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        isError: true,
+        Featured: [],
       };
     default:
       return state;
