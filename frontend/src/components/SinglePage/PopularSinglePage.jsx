@@ -1,27 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { getTrendingData } from "../.././Redux/AppReducer/action";
+import { getPopularData } from "../.././Redux/AppReducer/action";
 
-const SinglePage = () => {
+const PopularSinglePage = () => {
   const { _id } = useParams();
   const dispatch = useDispatch();
-  const Trending_data = useSelector((state) => state.AppReducer.Trending);
-  console.log("Trend", Trending_data);
+  const Popular_data = useSelector((state) => state.AppReducer.Popular);
+  console.log("Popular", Popular_data);
   const [currentTrending, setCurrentTrending] = useState({});
 
   useEffect(() => {
-    if (Trending_data.length === 0) {
-      dispatch(getTrendingData());
+    if (Popular_data.length === 0) {
+      dispatch(getPopularData());
     }
-  }, [Trending_data.length, dispatch]);
+  }, [Popular_data.length, dispatch]);
 
   useEffect(() => {
     if (_id) {
-      const currentTrending = Trending_data.find((item) => item._id === _id);
+      const currentTrending = Popular_data.find((item) => item._id === _id);
       currentTrending && setCurrentTrending(currentTrending);
     }
-  }, [_id, Trending_data]);
+  }, [_id, Popular_data]);
   return (
     <div style={{ textAlign: "center" }}>
       <h2>{currentTrending?.Title}</h2>
@@ -35,4 +35,4 @@ const SinglePage = () => {
   );
 };
 
-export default SinglePage;
+export default PopularSinglePage;
