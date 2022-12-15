@@ -12,7 +12,7 @@ const CurrentData = () => {
   }, [dispatch]);
   return (
     <>
-      <h1 className="Watchfree">CURRENT HITS AND FUTURE RELEASE</h1>
+      <h1 className="Watchfree">Currents Hits and Future release</h1>
       <div className="TrendingDiv">
         {isLoading && <h1>Loading....</h1>}
         {Current_data.length > 0 &&

@@ -21,6 +21,7 @@ const Trending = () => {
           Trending_data.map((item) => {
             return (
               <div>
+              
                 <Link to={`/Movies/${item._id}`}>
                   <img src={item.Poster} alt={item.Title} />
                 </Link>
