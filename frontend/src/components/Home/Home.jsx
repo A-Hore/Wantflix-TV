@@ -7,12 +7,15 @@ import ComedyData from "./ComedyData/ComedyData";
 import FutureReleased from "./FutureRelease/FutureRelease";
 import Historical from "./HistoricalDrama/HistoricalDrama";
 import Original from "./Original/original";
+import Popular from "./MostPopular/Mostpopular";
+
 const Home = () => {
   return (
     <div>
       <h1>Navbar here</h1>
       <AutoPlay />
       <Trending />
+      <Popular/>
       <CurrentData />
       <ComedyData />
       <FutureReleased />
