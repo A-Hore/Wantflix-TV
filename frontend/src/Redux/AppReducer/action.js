@@ -40,4 +40,23 @@ const getComedyData = (dispatch) => {
     );
 };
 
-export { getTrendingData, getCurrentData, getComedyData };
+//for future released
+
+const getFeatureReleasedData = (dispatch) => {
+  dispatch({ type: types.GET_FEATURED_DATA_REQUEST });
+  return axios
+    .get("https://troubled-slip-lion.cyclic.app/featured")
+    .then((res) =>
+      dispatch({ type: types.GET_FEATURED_DATA_SUCCESS, payload: res.data })
+    )
+    .catch((err) =>
+      dispatch({ type: types.GET_FEATURED_DATA_FAILURE, payload: err })
+    );
+};
+
+export {
+  getTrendingData,
+  getCurrentData,
+  getComedyData,
+  getFeatureReleasedData,
+};
