@@ -6,12 +6,21 @@ const { featuredRouter } = require("./Routes/featured.route");
 const { historiaclRouter } = require("./Routes/historical.route");
 const { originalRouter } = require("./Routes/original.route");
 const { popularRouter } = require("./Routes/popular.route");
-const {  premiumRouter } = require("./Routes/premium.route");
+const { premiumRouter } = require("./Routes/premium.route");
+const { loginRouter } = require("./Routes/login.route");
+const { signupRouter } = require("./Routes/signup.route");
+const cors = require("cors");
 
 require("dotenv").config();
 
 const app = express();
 app.use(express.json());
+
+app.use(
+  cors({
+    origin: "*",
+})
+);
 
 app.get("/", async (req, res) => {
   res.send("homepage");
@@ -29,14 +38,14 @@ app.listen(process.env.PORT, async () => {
   }
 });
 
-
-
 // ALL ROUTES
 
 app.use("/current", currentRouter);
-app.use("/comedy" , commediRouter)
-app.use("/featured", featuredRouter)
-app.use("/historical", historiaclRouter)
-app.use("/original",originalRouter)
-app.use("/popular", popularRouter)
-app.use("/premium",premiumRouter)
+app.use("/comedy", commediRouter);
+app.use("/featured", featuredRouter);
+app.use("/historical", historiaclRouter);
+app.use("/original", originalRouter);
+app.use("/popular", popularRouter);
+app.use("/premium", premiumRouter);
+app.use("/login", loginRouter);
+app.use("/signup", signupRouter);
