@@ -1,9 +1,9 @@
 const { Router } = require("express");
-const { PremiumModel } = require("../Models/Premium.model");
+const {Prime} =require('../Models/Premium.model')
 const premiumRouter = Router();
 premiumRouter.get("/", async (req, res) => {
   try {
-    let currentMovie = await PremiumModel.find();
+    let currentMovie = await Prime.find();
     // console.log(currentMovie);
     res.send(currentMovie);
   } catch (err) {
@@ -11,4 +11,4 @@ premiumRouter.get("/", async (req, res) => {
     console.log(err);
   }
 });
-module.exports = { premiumRouter };
+module.exports = { premiumRouter}
