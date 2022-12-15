@@ -14,5 +14,5 @@ const currenSchema = mongoose.Schema({
   Country: { type: String, required: true },
   Awards: { type: String, required: true },
 });
-const PremiumModel = mongoose.model("premium", currenSchema);
-module.exports = { PremiumModel };
+const Prime = mongoose.model("prime", {});
+module.exports = { Prime };

@@ -6,7 +6,7 @@ const { featuredRouter } = require("./Routes/featured.route");
 const { historiaclRouter } = require("./Routes/historical.route");
 const { originalRouter } = require("./Routes/original.route");
 const { popularRouter } = require("./Routes/popular.route");
-const { premiumRouter } = require("./Routes/premium.route");
+const {  premiumRouter } = require("./Routes/premium.route");
 
 require("dotenv").config();
 
