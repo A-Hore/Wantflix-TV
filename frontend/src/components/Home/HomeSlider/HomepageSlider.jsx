@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import first from "../Images/first.png";
-import second from "../Images/second.png";
-import fourth from "../Images/fourth.png";
+import first from "../../Images/first.png";
+import second from "../../Images/second.png";
+import fourth from "../../Images/fourth.png";
 export default class AutoPlay extends Component {
   render() {
     const settings = {
