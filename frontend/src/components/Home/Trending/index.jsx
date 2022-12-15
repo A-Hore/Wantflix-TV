@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getTrendingData } from "../../../Redux/AppReducer/action";
+import { Link } from "react-router-dom";
 import "./Trending.css";
 const Trending = () => {
   const dispatch = useDispatch();
@@ -20,7 +21,9 @@ const Trending = () => {
           Trending_data.map((item) => {
             return (
               <div>
-                <img src={item.Poster} alt={item.Title} />
+                <Link to={`/Movies/${item._id}`}>
+                  <img src={item.Poster} alt={item.Title} />
+                </Link>
               </div>
             );
           })}
