@@ -12,15 +12,14 @@ import Popular from "./MostPopular/Mostpopular";
 const Home = () => {
   return (
     <div>
-      <h1>Navbar here</h1>
       <AutoPlay />
       <Trending />
-      <Popular/>
+      <Popular />
       <CurrentData />
       <ComedyData />
       <FutureReleased />
       <Historical />
-      <Original/>
+      <Original />
     </div>
   );
 };
