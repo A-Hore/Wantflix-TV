@@ -13,6 +13,7 @@ const Trending = () => {
   return (
     <>
       <h1 className="Watchfree">Watch Premium for Free</h1>
+      <hr />
       <div className="TrendingDiv">
         {isLoading && <h1>Loading....</h1>}
         {Trending_data.length > 0 &&
