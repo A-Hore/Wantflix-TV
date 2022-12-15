@@ -68,6 +68,20 @@ const getHistoricalData = (dispatch) => {
       dispatch({ type: types.GET_HISTORICAL_DATA_FAILURE, payload: err })
     );
 };
+//for Popular data
+const getPopularData = (dispatch) => {
+  dispatch({ type: types.GET_POPULAR_DATA_REQUEST });
+  return axios
+    .get("https://troubled-slip-lion.cyclic.app/popular")
+    .then((res) =>
+      dispatch({ type: types.GET_POPULAR_DATA_SUCCESS, payload: res.data })
+      
+    )
+    .catch((err) =>
+      dispatch({ type: types.GET_POPULAR_DATA_FAILURE, payload: err })
+     
+    );
+};
 
 export {
   getTrendingData,
@@ -75,4 +89,5 @@ export {
   getComedyData,
   getFeatureReleasedData,
   getHistoricalData,
+  getPopularData
 };
