@@ -1,4 +1,5 @@
 import axios from "axios";
+import { data } from "jquery";
 import * as types from "./actionTypes";
 
 const getTrendingData = (dispatch) => {
@@ -54,9 +55,24 @@ const getFeatureReleasedData = (dispatch) => {
     );
 };
 
+//for historical data
+
+const getHistoricalData = (dispatch) => {
+  dispatch({ type: types.GET_HISTORICAL_DATA_REQUEST });
+  return axios
+    .get("https://troubled-slip-lion.cyclic.app/historical")
+    .then((res) =>
+      dispatch({ type: types.GET_HISTORICAL_DATA_SUCCESS, payload: res.data })
+    )
+    .catch((err) =>
+      dispatch({ type: types.GET_HISTORICAL_DATA_FAILURE, payload: err })
+    );
+};
+
 export {
   getTrendingData,
   getCurrentData,
   getComedyData,
   getFeatureReleasedData,
+  getHistoricalData,
 };

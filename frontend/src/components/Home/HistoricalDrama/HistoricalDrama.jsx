@@ -1,23 +1,22 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getTrendingData } from "../../../Redux/AppReducer/action";
-import "./Trending.css";
-const Trending = () => {
+import { getHistoricalData } from "../../../Redux/AppReducer/action";
+// import "../Trending.css";
+const Historical = () => {
   const dispatch = useDispatch();
-  const Trending_data = useSelector((state) => state.AppReducer.Trending);
-  console.log(Trending_data);
+  const Historical_data = useSelector((state) => state.AppReducer.Historical);
+  console.log(Historical_data);
   const isLoading = useSelector((state) => state.AppReducer.isLoading);
   useEffect(() => {
-    dispatch(getTrendingData);
+    dispatch(getHistoricalData);
   }, [dispatch]);
   return (
     <>
-      <h1 className="Watchfree">Watch Premium for Free</h1>
-      <hr />
+      <h1 className="Watchfree">HISTORICAL RELEASE</h1>
       <div className="TrendingDiv">
         {isLoading && <h1>Loading....</h1>}
-        {Trending_data.length > 0 &&
-          Trending_data.map((item) => {
+        {Historical_data.length > 0 &&
+          Historical_data.map((item) => {
             return (
               <div>
                 <img src={item.Poster} alt={item.Title} />
@@ -29,4 +28,4 @@ const Trending = () => {
   );
 };
 
-export default Trending;
+export default Historical;
