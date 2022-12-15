@@ -8,19 +8,21 @@ import FutureReleased from "./FutureRelease/FutureRelease";
 import Historical from "./HistoricalDrama/HistoricalDrama";
 import Original from "./Original/original";
 import Popular from "./MostPopular/Mostpopular";
+import Header from "../Navbar/Navbar";
 
 const Home = () => {
   return (
     <div>
-      <h1>Navbar here</h1>
+      {/* <h1>Navbar here</h1> */}
+      <Header />
       <AutoPlay />
       <Trending />
-      <Popular/>
+      <Popular />
       <CurrentData />
       <ComedyData />
       <FutureReleased />
       <Historical />
-      <Original/>
+      <Original />
     </div>
   );
 };
