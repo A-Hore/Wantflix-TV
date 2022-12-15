@@ -6,6 +6,7 @@ const initialState = {
   Current: [],
   Comedy: [],
   Featured: [],
+  Historical: [],
   isLoading: false,
   isError: false,
 };
@@ -85,6 +86,25 @@ const reducer = (state = initialState, action) => {
         isLoading: false,
         isError: true,
         Featured: [],
+      };
+
+    case types.GET_HISTORICAL_DATA_REQUEST:
+      return {
+        ...state,
+        isLoading: true,
+      };
+    case types.GET_HISTORICAL_DATA_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        Historical: payload,
+      };
+    case types.GET_HISTORICAL_DATA_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        isError: true,
+        Historical: [],
       };
     default:
       return state;
