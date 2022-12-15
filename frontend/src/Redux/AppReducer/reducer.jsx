@@ -3,6 +3,7 @@ import * as types from "./actionTypes";
 
 const initialState = {
   Trending: [],
+
   isLoading: false,
   isError: false,
 };
