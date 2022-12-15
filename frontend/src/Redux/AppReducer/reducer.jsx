@@ -3,6 +3,7 @@ import * as types from "./actionTypes";
 
 const initialState = {
   Trending: [],
+  Original:[],
   Current: [],
   Comedy: [],
   Featured: [],
@@ -105,6 +106,25 @@ const reducer = (state = initialState, action) => {
         isLoading: false,
         isError: true,
         Historical: [],
+      };
+
+      case types.GET_ORIGINAL_DATA_REQUEST:
+      return {
+        ...state,
+        isLoading: true,
+      };
+    case types.GET_ORIGINAL_DATA_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        Original: payload,
+      };
+    case types.GET_ORIGINAL_DATA_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        isError: true,
+        Original: [],
       };
     default:
       return state;

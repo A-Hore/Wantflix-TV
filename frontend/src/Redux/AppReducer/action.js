@@ -69,10 +69,25 @@ const getHistoricalData = (dispatch) => {
     );
 };
 
+//for Original data
+
+const getOriginalData = (dispatch) => {
+  dispatch({ type: types.GET_ORIGINAL_DATA_REQUEST });
+  return axios
+    .get("https://troubled-slip-lion.cyclic.app/original")
+    .then((res) =>
+      dispatch({ type: types.GET_ORIGINAL_DATA_SUCCESS, payload: res.data })
+    )
+    .catch((err) =>
+      dispatch({ type: types.GET_ORIGINAL_DATA_FAILURE, payload: err })
+    );
+};
+
 export {
   getTrendingData,
   getCurrentData,
   getComedyData,
   getFeatureReleasedData,
   getHistoricalData,
+  getOriginalData,
 };
