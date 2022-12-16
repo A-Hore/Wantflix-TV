@@ -1,27 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { getTrendingData } from "../.././Redux/AppReducer/action";
+import { getComedyData } from "../.././Redux/AppReducer/action";
 import "./SinglePage.css";
-const SinglePage = () => {
+const ComedySingle = () => {
   const { _id } = useParams();
   const dispatch = useDispatch();
-  const Trending_data = useSelector((state) => state.AppReducer.Trending);
-  console.log("Trend", Trending_data);
+  const Comedy_data = useSelector((state) => state.AppReducer.Comedy);
+  console.log("Trend", Comedy_data);
   const [currentTrending, setCurrentTrending] = useState({});
 
   useEffect(() => {
-    if (Trending_data.length === 0) {
-      dispatch(getTrendingData());
+    if (Comedy_data.length === 0) {
+      dispatch(getComedyData());
     }
-  }, [Trending_data.length, dispatch]);
+  }, [Comedy_data.length, dispatch]);
 
   useEffect(() => {
     if (_id) {
-      const currentTrending = Trending_data.find((item) => item._id === _id);
+      const currentTrending = Comedy_data.find((item) => item._id === _id);
       currentTrending && setCurrentTrending(currentTrending);
     }
-  }, [_id, Trending_data]);
+  }, [_id, Comedy_data]);
   return (
     <div className="Single">
       <div>
@@ -41,4 +41,4 @@ const SinglePage = () => {
   );
 };
 
-export default SinglePage;
+export default ComedySingle;

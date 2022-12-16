@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { getCurrentData } from "../../../Redux/AppReducer/action";
 // import "../Trending.css";
 const CurrentData = () => {
@@ -18,9 +19,9 @@ const CurrentData = () => {
         {Current_data.length > 0 &&
           Current_data.map((item) => {
             return (
-              <div>
+              <Link to={`/Current/${item._id}`}>
                 <img src={item.Poster} alt={item.Title} />
-              </div>
+              </Link>
             );
           })}
       </div>

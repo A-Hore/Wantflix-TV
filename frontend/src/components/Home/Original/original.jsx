@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { getOriginalData } from "../../../Redux/AppReducer/action";
 import "../Trending/Trending.css";
 const Original = () => {
@@ -19,9 +20,9 @@ const Original = () => {
         {Original_data.length > 0 &&
           Original_data.map((item) => {
             return (
-              <div>
+              <Link to={`Original/${item._id}`}>
                 <img src={item.Poster} alt={item.Title} />
-              </div>
+              </Link>
             );
           })}
       </div>

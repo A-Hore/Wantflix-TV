@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { getFeatureReleasedData } from "../../../Redux/AppReducer/action";
 // import "../Trending.css";
 const FutureReleased = () => {
@@ -18,9 +19,9 @@ const FutureReleased = () => {
         {Featured_data.length > 0 &&
           Featured_data.map((item) => {
             return (
-              <div>
+              <Link to={`Future/${item._id}`}>
                 <img src={item.Poster} alt={item.Title} />
-              </div>
+              </Link>
             );
           })}
       </div>

@@ -1,0 +1,14 @@
+.Single {
+  border: 1px solid red;
+}
+.Poster {
+  /* border: 1px solid red; */
+  width: 95%;
+  margin: auto;
+}
+.Title {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
