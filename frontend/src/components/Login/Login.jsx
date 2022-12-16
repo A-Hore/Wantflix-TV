@@ -2,79 +2,79 @@ import "./login.css";
 export default function Login() {
   return (
     <>
-      <div class="login-wrap">
-        <div class="login-html">
-          <input id="tab-1" type="radio" name="tab" class="sign-in" checked />
-          <label for="tab-1" class="tab">
+      <div className="login-wrap">
+        <div className="login-html">
+          <input id="tab-1" type="radio" name="tab" className="sign-in" checked />
+          <label for="tab-1" className="tab">
             Sign In
           </label>
-          <input id="tab-2" type="radio" name="tab" class="sign-up" />
-          <label for="tab-2" class="tab">
+          <input id="tab-2" type="radio" name="tab" className="sign-up" />
+          <label for="tab-2" className="tab">
             Sign Up
           </label>
-          <div class="login-form">
-            <div class="sign-in-htm">
-              <div class="group">
-                <label for="user" class="label">
+          <div className="login-form">
+            <div className="sign-in-htm">
+              <div className="group">
+                <label for="user" className="label">
                   Username
                 </label>
-                <input id="user" type="text" class="input" />
+                <input id="user" type="text" className="input" />
               </div>
-              <div class="group">
-                <label for="pass" class="label">
+              <div className="group">
+                <label for="pass" className="label">
                   Password
                 </label>
                 <input
                   id="pass"
                   type="password"
-                  class="input"
+                  className="input"
                   data-type="password"
                 />
               </div>
-              <div class="group">
-                <input id="check" type="checkbox" class="check" />
+              <div className="group">
+                <input id="check" type="checkbox" className="check" />
                 <label for="check">
-                  <span class="icon"></span> Keep me Signed in
+                  <span className="icon"></span> Keep me Signed in
                 </label>
               </div>
-              <div class="group">
-                <input type="submit" class="button" value="Sign In" />
+              <div className="group">
+                <input type="submit" className="button" value="Sign In" />
               </div>
-              <div class="hr"></div>
-              <div class="foot-lnk">
+              <div className="hr"></div>
+              <div className="foot-lnk">
                 <a href="#forgot">Forgot Password?</a>
               </div>
             </div>
-            <div class="sign-up-htm">
-              <div class="group">
-                <label for="user" class="label">
+            <div className="sign-up-htm">
+              <div className="group">
+                <label for="user" className="label">
                   Username
                 </label>
-                <input id="user" type="text" class="input" />
+                <input id="user" type="text" className="input" />
               </div>
-              <div class="group">
-                <label for="pass" class="label">
+              <div className="group">
+                <label for="pass" className="label">
                   Password
                 </label>
                 <input
                   id="pass"
                   type="password"
-                  class="input"
+                  className="input"
                   data-type="password"
                 />
               </div>
 
-              <div class="group">
-                <label for="pass" class="label">
+              <div className="group">
+                <label for="pass" className="label">
                   Email Address
                 </label>
-                <input id="pass" type="text" class="input" />
+                <input id="pass" type="text" className="input" />
               </div>
-              <div class="group">
-                <input type="submit" class="button" value="Sign Up" />
+              <div className="group">
+                <input type="submit" className="button" value="Sign Up" />
               </div>
-              <div class="hr"></div>
-              <div class="foot-lnk">
+              <div className="hr"></div>
+              <div className="foot-lnk">
                 <label for="tab-1">Already Member?</label>
               </div>
             </div>
