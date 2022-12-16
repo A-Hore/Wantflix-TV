@@ -10,6 +10,8 @@ import Original from "./Original/original";
 import Popular from "./MostPopular/Mostpopular";
 import MiniBanner from "./MiniBanner/MiniBanner";
 import { jumboSliderData } from "./MiniBanner/Data";
+import { Footer } from "../Footer/Footer";
+
 
 const Home = () => {
   return (
@@ -23,6 +25,7 @@ const Home = () => {
       <FutureReleased />
       <Historical />
       <Original />
+      <Footer/>
     </div>
   );
 };
