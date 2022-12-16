@@ -13,8 +13,9 @@ const Trending = () => {
   }, [dispatch]);
   return (
     <>
-      <h1 className="Watchfree">Watch Premium for Free</h1>
-      <hr />
+    {/* <hr className="colourh" /> */}
+      <h1 className="Watchfree">Watch Premium and Trending Movies for Free </h1>
+      
       <div className="TrendingDiv">
         {isLoading && <h1>Loading....</h1>}
         {Trending_data.length > 0 &&

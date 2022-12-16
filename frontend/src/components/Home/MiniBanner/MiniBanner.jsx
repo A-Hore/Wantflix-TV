@@ -8,6 +8,7 @@ import {
 } from "@chakra-ui/react";
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 import Slider from "react-slick";
+import "./MiniBanner.css"
 
 const settings = {
   dots: true,
@@ -29,12 +30,12 @@ export default function MiniBanner({ data }) {
 
   return (
     <Center mt={5}>
-      <Box
+      <Box id="minibanner"
         justifyContent={"center"}
         alignItems={"center"}
-        position={"relative"}
+        // position={"relative"}
         height={"500px"}
-        width={"80%"}
+        width={"90%"}
         overflow={"hidden"}
       >
         {/* CSS files for react-slick */}

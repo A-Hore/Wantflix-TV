@@ -1,39 +1,54 @@
 .TrendingDiv {
   /* border: 1px solid red; */
-  background-color: whitesmoke;
+  background-color: rgb(115,114,115);
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 21px;
   padding: 25px;
-  color: white;
+  margin-top: 2px;
+    /* border: 1px solid red; */
+  color: whitesmoke;
 }
 .TrendingDiv > div {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  /* border: 1px solid red; */ 
 }
+.TrendingDiv > div:hover {
+   /* background-color: red; */
+}
+
 .TrendingDiv > div > img {
   border-radius: 4%;
   /* border: 1px solid red; */
   height: 160px;
   width: 1000px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.TrendingDiv > div:hover {
-  background-color: red;
-}
+/* img:hover{
+  background-color: brown;
+
+} */
 .Watchfree {
-  font-size: 15px;
+  font-size: 18px;
   display: flex;
   justify-content: flex-start;
   margin-left: 2%;
-  margin-bottom: 10px;
-  color: black;
+  margin-top: 10px;
+ 
+  color: whitesmoke;
   font-family: sans-serif;
   font-weight: bold;
 }
 
+/* .colourh{
+  color: red;
+  margin-bottom: 10px;
+} */
+
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .TrendingDiv {
     /* border: 1px solid red; */
-    background-color: whitesmoke;
+    background-color: rgb(115,114,115);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 21px;
@@ -45,7 +60,7 @@
 @media screen and (min-width: 481px) and (max-width: 767px) {
   .TrendingDiv {
     /* border: 1px solid red; */
-    background-color: whitesmoke;
+    background-color: rgb(115,114,115);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 21px;
