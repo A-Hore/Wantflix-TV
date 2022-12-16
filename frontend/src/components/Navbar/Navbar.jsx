@@ -14,18 +14,20 @@ function Header() {
         />
       </Link>
       {/* <div><SearchIcon style={{color:"white"}}/></div> */}
-      <div className="header_search"> 
-
-         <Link to="/search">
-           <input className="header_searchInput" type="text" placeholder="Search"/>
-           
-         </Link>
-        
+      <div className="header_search">
+        <Link to="/search">
+          <input
+            className="header_searchInput"
+            type="text"
+            placeholder="Search"
+          />
+        </Link>
       </div>
 
-      
       <div className="signin_but">
-        <button className="but">Sign in</button>
+        <Link to="/login">
+          <button className="but">Sign in</button>
+        </Link>
       </div>
     </div>
   );
