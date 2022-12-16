@@ -56,6 +56,51 @@ const SinglePage = () => {
 
         <p className="About">About: {currentTrending?.Plot}</p>
       </div>
+      <h1 className="Cast">Cast & Crew</h1>
+      <div className="ActorsProfile">
+        <div>
+          <img
+            src="https://is3-ssl.mzstatic.com/image/thumb/HvzfGe9ikTmzKuTro-lU-A/492x492bb.webp"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://is4-ssl.mzstatic.com/image/thumb/-aSQlpjweESPMa_jLJrYEw/492x492ve.webp"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://is5-ssl.mzstatic.com/image/thumb/JQjesVs_ZFkBTNR92QGzXQ/492x492bb.webp"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://is1-ssl.mzstatic.com/image/thumb/w0Ujbx9q3-7QPrIlXH8NDw/492x492ve.webp"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://is2-ssl.mzstatic.com/image/thumb/OEqGt4xJnvzpnANG_6S5pw/492x492bb.webp"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://is1-ssl.mzstatic.com/image/thumb/LsuVdjXUIUmUiMsEE_jc3Q/492x492bb.webp"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://is4-ssl.mzstatic.com/image/thumb/-aSQlpjweESPMa_jLJrYEw/492x492ve.webp"
+            alt=""
+          />
+        </div>
+      </div>
     </div>
   );
 };
