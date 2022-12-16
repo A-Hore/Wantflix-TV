@@ -9,6 +9,8 @@ const initialState = {
   Comedy: [],
   Featured: [],
   Historical: [],
+  Kids:[],
+  Drama:[],
   isLoading: false,
   isError: false,
 };
@@ -149,6 +151,48 @@ const reducer = (state = initialState, action) => {
           Popular: [],
           isError: true,
         };
+        //KIDS
+      
+        case types.GET_KIDS_DATA_REQUEST:
+          return {
+            ...state,
+            isLoading: true,
+          };
+        case types.GET_KIDS_DATA_SUCCESS:
+          return {
+            ...state,
+            isLoading: false,
+            Kids: payload,
+          };
+    
+        case types.GET_KIDS_DATA_FAILURE:
+          return {
+            ...state,
+            isLoading: false,
+            Kids: [],
+            isError: true,
+          };
+      //DRAMA
+      case types.GET_DRAMA_DATA_REQUEST:
+        return {
+          ...state,
+          isLoading: true,
+        };
+      case types.GET_DRAMA_DATA_SUCCESS:
+        return {
+          ...state,
+          isLoading: false,
+          Drama: payload,
+        };
+  
+      case types.GET_DRAMA_DATA_FAILURE:
+        return {
+          ...state,
+          isLoading: false,
+          Drama:[],
+          isError: true,
+        };
+    
     default:
       return state;
   }
