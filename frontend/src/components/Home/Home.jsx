@@ -31,9 +31,9 @@ const Home = () => {
       <FutureReleased />
       <Historical />
       <Original />
-      <Footer/>
       <Kids/>
       <Drama/>
+      <Footer/>
   
     </div>
   );
