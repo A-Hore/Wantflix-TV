@@ -10,6 +10,12 @@ const { premiumRouter } = require("./Routes/premium.route");
 const { loginRouter } = require("./Routes/login.route");
 const { signupRouter } = require("./Routes/signup.route");
 const cors = require("cors");
+const { totalRouter } = require("./Routes/total.route");
+const { MusicModel } = require("./Models/Musical.model");
+const { musicRouter } = require("./Routes/music.route");
+const { clitterRouter } = require("./Routes/clitters.route");
+const { dramaRouter } = require("./Routes/drama.route");
+const { kidRouter } = require("./Routes/kids.route");
 
 require("dotenv").config();
 
@@ -49,3 +55,8 @@ app.use("/popular", popularRouter);
 app.use("/premium", premiumRouter);
 app.use("/login", loginRouter);
 app.use("/signup", signupRouter);
+app.use("/all", totalRouter)
+app.use("/music", musicRouter)
+app.use("/clitter",clitterRouter)
+app.use("/drama", dramaRouter)
+app.use("/kid",kidRouter)
