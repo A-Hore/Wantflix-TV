@@ -25,7 +25,9 @@ const SinglePage = () => {
   return (
     <div className="Single">
       <div>
-        <h2 className="Title">You'r Watching Now -{currentTrending?.Title}</h2>
+        <h2 className="Title">
+          You'r Watching Now :- {currentTrending?.Title}-: Movie
+        </h2>
         <div>
           <img
             className="Poster"
@@ -33,9 +35,26 @@ const SinglePage = () => {
             alt="Cover Pic"
           />
         </div>
-        <div>
-          <div>{currentTrending?.Year}</div>
+        <div className="RelatedFilms">
+          <div>
+            <h1>Information</h1>
+            <p> Genre : {currentTrending?.Genre}</p>
+            <p> Released Year : {currentTrending?.Year}</p>
+            <p> imdbRating: {currentTrending?.imdbRating}</p>
+          </div>
+          <div>
+            <h1>Language</h1>
+            <p> Language: {currentTrending?.Language}</p>
+            <p> Runtime: {currentTrending?.Runtime}</p>
+            <p> Type: {currentTrending?.Type}</p>
+          </div>
+          <div>
+            <h1>Accessibility</h1>
+            <p>Country: {currentTrending?.Country}</p>
+          </div>
         </div>
+
+        <p className="About">About: {currentTrending?.Plot}</p>
       </div>
     </div>
   );

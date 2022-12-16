@@ -3,9 +3,6 @@ import {
   Box,
   IconButton,
   useBreakpointValue,
-  Stack,
-  Heading,
-  Button,
   Center,
   Divider,
 } from "@chakra-ui/react";

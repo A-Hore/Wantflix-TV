@@ -24,13 +24,38 @@ const HistoricalSingle = () => {
     }
   }, [_id, Comedy_data]);
   return (
-    <div style={{ textAlign: "center" }}>
-      <h2>{currentTrending?.Title}</h2>
+    <div className="Single">
       <div>
-        <img src={`${currentTrending.Poster}`} alt="Cover Pic" />
-      </div>
-      <div>
-        <div>{currentTrending?.Year}</div>
+        <h2 className="Title">
+          You'r Watching Now :- {currentTrending?.Title}-: Movie
+        </h2>
+        <div>
+          <img
+            className="Poster"
+            src={`${currentTrending.Poster}`}
+            alt="Cover Pic"
+          />
+        </div>
+        <div className="RelatedFilms">
+          <div>
+            <h1>Information</h1>
+            <p> Genre : {currentTrending?.Genre}</p>
+            <p> Released Year : {currentTrending?.Year}</p>
+            <p> imdbRating: {currentTrending?.imdbRating}</p>
+          </div>
+          <div>
+            <h1>Language</h1>
+            <p> Language: {currentTrending?.Language}</p>
+            <p> Runtime: {currentTrending?.Runtime}</p>
+            <p> Type: {currentTrending?.Type}</p>
+          </div>
+          <div>
+            <h1>Accessibility</h1>
+            <p>Country: {currentTrending?.Country}</p>
+          </div>
+        </div>
+
+        <p className="About">About: {currentTrending?.Plot}</p>
       </div>
     </div>
   );
