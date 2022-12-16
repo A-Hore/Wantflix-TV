@@ -13,7 +13,7 @@ const Historical = () => {
   }, [dispatch]);
   return (
     <>
-      <h1 className="Watchfree">Historical Release</h1>
+      <h1 className="Watchfree">Historical Release Movies</h1>
       <div className="TrendingDiv">
         {isLoading && <h1>Loading....</h1>}
         {Historical_data.length > 0 &&

@@ -13,7 +13,7 @@ const FutureReleased = () => {
   }, [dispatch]);
   return (
     <>
-      <h1 className="Watchfree">Watch Entire seasons</h1>
+      <h1 className="Watchfree">Watch Entire seasons upcomming</h1>
       <div className="TrendingDiv">
         {isLoading && <h1>Loading....</h1>}
         {Featured_data.length > 0 &&

@@ -119,6 +119,31 @@ const getdramaData = (dispatch) => {
       dispatch({ type: types.GET_DRAMA_DATA_FAILURE, payload: err })
     );
 };
+// for clitter
+const getclitterData = (dispatch) => {
+  dispatch({ type: types.GET_CLITTER_DATA_REQUEST });
+  return axios
+    .get("https://troubled-slip-lion.cyclic.app/clitter")
+    .then((res) =>
+      dispatch({ type: types.GET_CLITTER_DATA_SUCCESS, payload: res.data })
+    )
+    .catch((err) =>
+      dispatch({ type: types.GET_CLITTER_DATA_FAILURE, payload: err })
+    );
+};
+// for music data
+
+const getmusicData = (dispatch) => {
+  dispatch({ type: types.GET_MUSIC_DATA_REQUEST });
+  return axios
+    .get("https://troubled-slip-lion.cyclic.app/music")
+    .then((res) =>
+      dispatch({ type: types.GET_MUSIC_DATA_SUCCESS, payload: res.data })
+    )
+    .catch((err) =>
+      dispatch({ type: types.GET_MUSIC_DATA_FAILURE, payload: err })
+    );
+};
 
 export {
   getTrendingData,
@@ -130,4 +155,6 @@ export {
   getPopularData,
   getKidsData,
   getdramaData,
+  getclitterData,
+  getmusicData,
 };

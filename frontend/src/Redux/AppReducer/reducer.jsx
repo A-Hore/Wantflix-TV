@@ -10,7 +10,9 @@ const initialState = {
   Featured: [],
   Historical: [],
   Kids:[],
+  Clitter:[],
   Drama:[],
+  Music:[],
   isLoading: false,
   isError: false,
 };
@@ -192,7 +194,46 @@ const reducer = (state = initialState, action) => {
           Drama:[],
           isError: true,
         };
-    
+    // for clitter
+    case types.GET_CLITTER_DATA_REQUEST:
+      return {
+        ...state,
+        isLoading: true,
+      };
+    case types.GET_CLITTER_DATA_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        Clitter: payload,
+      };
+
+    case types.GET_CLITTER_DATA_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        Clitter:[],
+        isError: true,
+      };
+      // for music
+      case types.GET_MUSIC_DATA_REQUEST:
+        return {
+          ...state,
+          isLoading: true,
+        };
+      case types.GET_MUSIC_DATA_SUCCESS:
+        return {
+          ...state,
+          isLoading: false,
+          Music: payload,
+        };
+  
+      case types.GET_MUSIC_DATA_FAILURE:
+        return {
+          ...state,
+          isLoading: false,
+          Music:[],
+          isError: true,
+        };
     default:
       return state;
   }

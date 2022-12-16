@@ -14,7 +14,7 @@ const Popular = () => {
   }, [dispatch]);
   return (
     <>
-      <h1 className="Watchfree"> Most Popular</h1>
+      <h1 className="Watchfree"> Most Popular Series</h1>
       <div className="TrendingDiv">
         {isLoading && <h1>Loading....</h1>}
         {Popular_data.length > 0 &&

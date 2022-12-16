@@ -13,8 +13,8 @@ const Original = () => {
   }, [dispatch]);
   return (
     <>
-      <h1 className="Watchfree">Latest Originals</h1>
-      <hr />
+      <h1 className="Watchfree">Latest Originals released</h1>
+     
       <div className="TrendingDiv">
         {isLoading && <h1>Loading....</h1>}
         {Original_data.length > 0 &&

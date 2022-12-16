@@ -13,8 +13,8 @@ const Kids = () => {
   }, [dispatch]);
   return (
     <>
-      <h1 className="Watchfree">Kids</h1>
-      <hr />
+      <h1 className="Watchfree">Kids Movies</h1>
+
       <div className="TrendingDiv">
         {isLoading && <h1>Loading....</h1>}
         {Kids_data.length > 0 &&

@@ -13,8 +13,8 @@ const Drama = () => {
   }, [dispatch]);
   return (
     <>
-      <h1 className="Watchfree">Drama</h1>
-      <hr />
+      <h1 className="Watchfree">Drama Movies</h1>
+   
       <div className="TrendingDiv">
         {isLoading && <h1>Loading....</h1>}
         {Drama_data.length > 0 &&
