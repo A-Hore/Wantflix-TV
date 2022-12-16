@@ -11,13 +11,10 @@ import Popular from "./MostPopular/Mostpopular";
 
 
 import { jumboSliderData } from "./MiniBanner/Data";
+import { Footer } from "../Footer/Footer"
 import MiniBanner from "./MiniBanner/MiniBanner";
 import Kids from "./Kids/Kids";
 import Drama from "./Drama/Drama";
-
-
-
-
 
 
 
@@ -34,6 +31,7 @@ const Home = () => {
       <FutureReleased />
       <Historical />
       <Original />
+      <Footer/>
       <Kids/>
       <Drama/>
   

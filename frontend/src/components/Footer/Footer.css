@@ -1,0 +1,143 @@
+/* ####################### Device Info Container ###################### */
+#devices-info_container {
+    width: 100%;
+    margin-top: 4rem;
+    background: rgb(26,44,64);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .devices-info {
+    width: 50%;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    word-break: break-word;
+  }
+  
+  .tv-logo {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .tv-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .devices-heading {
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin: 1.3rem 0 0 0;
+    user-select: none;
+  }
+  
+  .devices-subheading {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 1.3rem 0;
+    padding: 0;
+    user-select: none;
+  }
+  
+  .devices {
+    margin: 0.8rem 0;
+    display: grid;
+    grid-template: 6.75rem / repeat(5, 1fr);
+    column-gap: 0.5rem;
+  }
+  
+  .device img {
+    width: 100%;
+    object-fit: cover;
+    align-items: center;
+  }
+  
+  .dev-cat {
+    margin: 0.2rem 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    user-select: none;
+  }
+  
+  .devices-info a {
+    text-decoration: none;
+    color: #409cff;
+  }
+  
+  .dev-info {
+    font-size: 1.5rem;
+    font-weight: 600;
+    user-select: none;
+  }
+  
+  .dev-info,
+  .dev-setup,
+  .dev-compt {
+    margin: 0.2rem 0;
+  }
+  
+  .compt-devices {
+    margin: 1rem 0;
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
+    column-gap: 4rem;
+  }
+  
+  .compt-devices img {
+    width: 80%;
+    object-fit: cover;
+  }
+  
+  .dev-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+  
+  .avail {
+    font-size: 0.7rem;
+    user-select: none;
+  }
+  /* ####################### Footer Area ###################### */
+  #footer {
+    width: 100%;
+  }
+  
+  .main-footer {
+    width: 95%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 0.7rem;
+  }
+  
+  .main-footer .copy {
+    color: rgba(255, 255, 255, 0.6);
+    user-select: none;
+  }
+  
+  .main-footer_info-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-info_items {
+    margin: 0.8rem 0.5rem 0.8rem 0;
+    padding: 0 0.5rem 0 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  #footer-support_info {
+    border-right: none;
+  }
