@@ -8,8 +8,19 @@ import FutureReleased from "./FutureRelease/FutureRelease";
 import Historical from "./HistoricalDrama/HistoricalDrama";
 import Original from "./Original/original";
 import Popular from "./MostPopular/Mostpopular";
-import MiniBanner from "./MiniBanner/MiniBanner";
+
+
 import { jumboSliderData } from "./MiniBanner/Data";
+import MiniBanner from "./MiniBanner/MiniBanner";
+import Kids from "./Kids/Kids";
+import Drama from "./Drama/Drama";
+
+
+
+
+
+
+
 
 const Home = () => {
   return (
@@ -23,6 +34,9 @@ const Home = () => {
       <FutureReleased />
       <Historical />
       <Original />
+      <Kids/>
+      <Drama/>
+  
     </div>
   );
 };
