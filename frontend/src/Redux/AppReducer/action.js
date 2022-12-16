@@ -95,6 +95,31 @@ const getOriginalData = (dispatch) => {
     );
 };
 
+//for kids data
+const getKidsData = (dispatch) => {
+  dispatch({ type: types.GET_KIDS_DATA_REQUEST });
+  return axios
+    .get("https://troubled-slip-lion.cyclic.app/kid")
+    .then((res) =>
+      dispatch({ type: types.GET_KIDS_DATA_SUCCESS, payload: res.data })
+    )
+    .catch((err) =>
+      dispatch({ type: types.GET_KIDS_DATA_FAILURE, payload: err })
+    );
+};
+// for drama
+const getdramaData = (dispatch) => {
+  dispatch({ type: types.GET_DRAMA_DATA_REQUEST });
+  return axios
+    .get("https://troubled-slip-lion.cyclic.app/drama")
+    .then((res) =>
+      dispatch({ type: types.GET_DRAMA_DATA_SUCCESS, payload: res.data })
+    )
+    .catch((err) =>
+      dispatch({ type: types.GET_DRAMA_DATA_FAILURE, payload: err })
+    );
+};
+
 export {
   getTrendingData,
   getCurrentData,
@@ -103,4 +128,6 @@ export {
   getHistoricalData,
   getOriginalData,
   getPopularData,
+  getKidsData,
+  getdramaData,
 };
