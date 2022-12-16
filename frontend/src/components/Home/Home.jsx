@@ -8,16 +8,18 @@ import FutureReleased from "./FutureRelease/FutureRelease";
 import Historical from "./HistoricalDrama/HistoricalDrama";
 import Original from "./Original/original";
 import Popular from "./MostPopular/Mostpopular";
+import MiniBanner from "./MiniBanner/MiniBanner";
+import { jumboSliderData } from "./MiniBanner/Data";
 
 const Home = () => {
   return (
     <div>
       <AutoPlay />
-    
       <Trending />
       <Popular />
       <CurrentData />
       <ComedyData />
+      <MiniBanner data={jumboSliderData} />
       <FutureReleased />
       <Historical />
       <Original />
