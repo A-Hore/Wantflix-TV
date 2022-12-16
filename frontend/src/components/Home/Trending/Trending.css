@@ -7,11 +7,17 @@
   padding: 25px;
   color: white;
 }
+.TrendingDiv>div{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 .TrendingDiv > div > img {
   border-radius: 4%;
   /* border: 1px solid red; */
   height: 160px;
   width: 1000px;
+}
+.TrendingDiv>div:hover{
+  background-color: red;
 }
 .Watchfree {
   font-size: 15px;
