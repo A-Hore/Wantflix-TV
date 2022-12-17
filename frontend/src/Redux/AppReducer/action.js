@@ -145,6 +145,18 @@ const getmusicData = (dispatch) => {
     );
 };
 
+const getSearchData = (dispatch) => {
+  dispatch({ type: types.GET_SEARCH_DATA_REQUEST });
+  return axios
+    .get("https://troubled-slip-lion.cyclic.app/all")
+    .then((res) =>
+      dispatch({ type: types.GET_SEARCH_DATA_SUCCESS, payload: res.data })
+    )
+    .catch((err) =>
+      dispatch({ type: types.GET_SEARCH_DATA_FAILURE, payload: err })
+    );
+};
+
 export {
   getTrendingData,
   getCurrentData,
@@ -157,4 +169,5 @@ export {
   getdramaData,
   getclitterData,
   getmusicData,
+  getSearchData,
 };
