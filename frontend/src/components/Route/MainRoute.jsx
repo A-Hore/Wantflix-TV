@@ -10,6 +10,10 @@ import HistoricalSingle from "../SinglePage/HistoricalSingle";
 import OriginSingle from "../SinglePage/OriginalSingle";
 import PopularSinglePage from "../SinglePage/PopularSinglePage";
 import SinglePage from "../SinglePage/TrendingSinglePage";
+import ClutterSingle from "../SinglePage/ClitterSingle";
+import DramaSingle from "../SinglePage/DramaSingle";
+import KidsSingle from "../SinglePage/KidsSingle";
+import MusicSingle from "../SinglePage/MusicSingle";
 const MainRoute = () => {
   return (
     <Routes>
@@ -23,6 +27,10 @@ const MainRoute = () => {
       <Route path="/Future/:_id" element={<FutureSingle />} />
       <Route path="/Historical/:_id" element={<HistoricalSingle />} />
       <Route path="/Original/:_id" element={<OriginSingle />} />
+      <Route path="/Clitter/:_id" element={<ClutterSingle />} />
+      <Route path="/Drama/:_id" element={<DramaSingle />} />
+      <Route path="/Kids/:_id" element={<KidsSingle />} />
+      <Route path="/Music/:_id" element={<MusicSingle />} />
 
       <Route path="*" element={<div>Page Not Found</div>} />
     </Routes>

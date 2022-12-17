@@ -14,15 +14,14 @@ const Music = () => {
   return (
     <>
       <h1 className="Watchfree">Music collections</h1>
-     
+
       <div className="TrendingDiv">
         {isLoading && <h1>Loading....</h1>}
         {Music_data.length > 0 &&
           Music_data.map((item) => {
             return (
               <div>
-              
-                <Link to={`/Movies/${item._id}`}>
+                <Link to={`/Music/${item._id}`}>
                   <img src={item.Poster} alt={item.Title} />
                 </Link>
               </div>
@@ -33,4 +32,4 @@ const Music = () => {
   );
 };
 
-export default Music ;
+export default Music;
