@@ -9,18 +9,18 @@ const { popularRouter } = require("./Routes/popular.route");
 const { premiumRouter } = require("./Routes/premium.route");
 const { loginRouter } = require("./Routes/login.route");
 const { signupRouter } = require("./Routes/signup.route");
-const cors = require("cors");
+// const cors = require("cors");
 
 require("dotenv").config();
 
 const app = express();
 app.use(express.json());
 
-app.use(
-  cors({
-    origin: "*",
-})
-);
+// app.use(
+//   cors({
+//     origin: "*",
+// })
+// );
 
 app.get("/", async (req, res) => {
   res.send("homepage");
