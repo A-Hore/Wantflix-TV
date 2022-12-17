@@ -87,7 +87,8 @@ export const Footer = () => {
               </div>
             </div>
             <p className="avail">
-              Device availability varies by country or region.
+              website designed by @WANTFLIX Developer Team
+              / ©2022 All Rights Reserved.
             </p>
           </div>
         </div>
