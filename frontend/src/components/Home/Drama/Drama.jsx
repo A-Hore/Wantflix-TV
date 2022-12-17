@@ -14,15 +14,14 @@ const Drama = () => {
   return (
     <>
       <h1 className="Watchfree">Drama Movies</h1>
-   
+
       <div className="TrendingDiv">
         {isLoading && <h1>Loading....</h1>}
         {Drama_data.length > 0 &&
           Drama_data.map((item) => {
             return (
               <div>
-              
-                <Link to={`/Movies/${item._id}`}>
+                <Link to={`/Drama/${item._id}`}>
                   <img src={item.Poster} alt={item.Title} />
                 </Link>
               </div>

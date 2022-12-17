@@ -22,7 +22,7 @@ const Kids = () => {
             return (
               <div>
               
-                <Link to={`/Movies/${item._id}`}>
+                <Link to={`/Kids/${item._id}`}>
                   <img src={item.Poster} alt={item.Title} />
                 </Link>
               </div>
