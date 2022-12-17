@@ -33,7 +33,7 @@ export default function MiniBanner({ data }) {
       <Box id="minibanner"
         justifyContent={"center"}
         alignItems={"center"}
-        // position={"relative"}
+        position={"relative"}
         height={"500px"}
         width={"90%"}
         overflow={"hidden"}
