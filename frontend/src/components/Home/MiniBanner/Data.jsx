@@ -1,7 +1,7 @@
 const jumboSliderData = [
     {
       image:
-        "https://c4.wallpaperflare.com/wallpaper/107/848/913/spiderman-ps4-spiderman-games-hd-wallpaper-preview.jpg",
+        "https://images6.fanpop.com/image/photos/40000000/The-Finest-Hours-Banner-movie-trailers-40025062-1200-638.jpg",
     },
     {
       image:
