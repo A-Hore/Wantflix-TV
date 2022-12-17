@@ -13,17 +13,15 @@ const Clitter = () => {
   }, [dispatch]);
   return (
     <>
-    
       <h1 className="Watchfree">Clitter shows</h1>
-    
+
       <div className="TrendingDiv">
         {isLoading && <h1>Loading....</h1>}
         {Clitter_data.length > 0 &&
           Clitter_data.map((item) => {
             return (
               <div>
-              
-                <Link to={`/Movies/${item._id}`}>
+                <Link to={`/Clitter/${item._id}`}>
                   <img src={item.Poster} alt={item.Title} />
                 </Link>
               </div>
