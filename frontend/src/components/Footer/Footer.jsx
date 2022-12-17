@@ -87,8 +87,8 @@ export const Footer = () => {
               </div>
             </div>
             <p className="avail">
-              website designed by @WANTFLIX Developer Team
-              / ©2022 All Rights Reserved.
+              website designed by @WANTFLIX Developer Team / ©2022 All Rights
+              Reserved.
             </p>
           </div>
         </div>
