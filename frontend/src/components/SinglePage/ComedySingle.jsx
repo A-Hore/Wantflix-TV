@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getComedyData } from "../.././Redux/AppReducer/action";
 import "./SinglePage.css";
+// import { Defending } from "./video";
 const ComedySingle = () => {
   const { _id } = useParams();
   const dispatch = useDispatch();
@@ -32,6 +33,7 @@ const ComedySingle = () => {
           <img
             className="Poster"
             src={`${currentTrending.Poster}`}
+            // src={Defending}
             alt="Cover Pic"
           />
         </div>
