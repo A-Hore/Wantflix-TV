@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "../Home/Home";
 import Login from "../Login/Login";
-import Search from "../Search/Search";
+// import Search from "../Search/Search";
 import ComedySingle from "../SinglePage/ComedySingle";
 import CurrentSingle from "../SinglePage/CurrentSingle";
 import FutureSingle from "../SinglePage/FutureSingle";
@@ -14,6 +14,8 @@ import ClutterSingle from "../SinglePage/ClitterSingle";
 import DramaSingle from "../SinglePage/DramaSingle";
 import KidsSingle from "../SinglePage/KidsSingle";
 import MusicSingle from "../SinglePage/MusicSingle";
+import Search from "../Home/SearchData/SearchData";
+import SearchSingle from "../SinglePage/SearchSingle";
 const MainRoute = () => {
   return (
     <Routes>
@@ -31,6 +33,7 @@ const MainRoute = () => {
       <Route path="/Drama/:_id" element={<DramaSingle />} />
       <Route path="/Kids/:_id" element={<KidsSingle />} />
       <Route path="/Music/:_id" element={<MusicSingle />} />
+      <Route path="/Search/:_id" element={<SearchSingle />} />
 
       <Route path="*" element={<div>Page Not Found</div>} />
     </Routes>

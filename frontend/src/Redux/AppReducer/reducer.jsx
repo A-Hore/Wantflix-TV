@@ -3,16 +3,17 @@ import * as types from "./actionTypes";
 
 const initialState = {
   Trending: [],
-  Original:[],
-  Popular:[],
+  Original: [],
+  Popular: [],
   Current: [],
   Comedy: [],
   Featured: [],
   Historical: [],
-  Kids:[],
-  Clitter:[],
-  Drama:[],
-  Music:[],
+  Kids: [],
+  Clitter: [],
+  Search: [],
+  Drama: [],
+  Music: [],
   isLoading: false,
   isError: false,
 };
@@ -113,7 +114,7 @@ const reducer = (state = initialState, action) => {
         Historical: [],
       };
 
-      case types.GET_ORIGINAL_DATA_REQUEST:
+    case types.GET_ORIGINAL_DATA_REQUEST:
       return {
         ...state,
         isLoading: true,
@@ -131,69 +132,66 @@ const reducer = (state = initialState, action) => {
         isError: true,
         Original: [],
       };
-      
-      //  POLPULAR DATA--------------------------------------------------- 
-   
-      case types.GET_POPULAR_DATA_REQUEST:
-        return {
-          ...state,
-          isLoading: true,
-        };
-      case types.GET_POPULAR_DATA_SUCCESS:
-        return {
-          ...state,
-          isLoading: false,
-          Popular: payload,
-        };
-  
-      case types.GET_POPULAR_DATA_FAILURE:
-        return {
-          ...state,
-          isLoading: false,
-          Popular: [],
-          isError: true,
-        };
-        //KIDS
-      
-        case types.GET_KIDS_DATA_REQUEST:
-          return {
-            ...state,
-            isLoading: true,
-          };
-        case types.GET_KIDS_DATA_SUCCESS:
-          return {
-            ...state,
-            isLoading: false,
-            Kids: payload,
-          };
-    
-        case types.GET_KIDS_DATA_FAILURE:
-          return {
-            ...state,
-            isLoading: false,
-            Kids: [],
-            isError: true,
-          };
-      //DRAMA
-      case types.GET_DRAMA_DATA_REQUEST:
-        return {
-          ...state,
-          isLoading: true,
-        };
-      case types.GET_DRAMA_DATA_SUCCESS:
-        return {
-          ...state,
-          isLoading: false,
-          Drama: payload,
-        };
-  
-      case types.GET_DRAMA_DATA_FAILURE:
-        return {
-          ...state,
-          isLoading: false,
-          Drama:[],
-          isError: true,
-        };
+    case types.GET_POPULAR_DATA_REQUEST:
+      return {
+        ...state,
+        isLoading: true,
+      };
+    case types.GET_POPULAR_DATA_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        Popular: payload,
+      };
+
+    case types.GET_POPULAR_DATA_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        Popular: [],
+        isError: true,
+      };
+    //KIDS
+
+    case types.GET_KIDS_DATA_REQUEST:
+      return {
+        ...state,
+        isLoading: true,
+      };
+    case types.GET_KIDS_DATA_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        Kids: payload,
+      };
+
+    case types.GET_KIDS_DATA_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        Kids: [],
+        isError: true,
+      };
+    //DRAMA
+    case types.GET_DRAMA_DATA_REQUEST:
+      return {
+        ...state,
+        isLoading: true,
+      };
+    case types.GET_DRAMA_DATA_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        Drama: payload,
+      };
+
+    case types.GET_DRAMA_DATA_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        Drama: [],
+        isError: true,
+      };
     // for clitter
     case types.GET_CLITTER_DATA_REQUEST:
       return {
@@ -211,29 +209,49 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         isLoading: false,
-        Clitter:[],
+        Clitter: [],
         isError: true,
       };
-      // for music
-      case types.GET_MUSIC_DATA_REQUEST:
-        return {
-          ...state,
-          isLoading: true,
-        };
-      case types.GET_MUSIC_DATA_SUCCESS:
-        return {
-          ...state,
-          isLoading: false,
-          Music: payload,
-        };
-  
-      case types.GET_MUSIC_DATA_FAILURE:
-        return {
-          ...state,
-          isLoading: false,
-          Music:[],
-          isError: true,
-        };
+    // for music
+    case types.GET_MUSIC_DATA_REQUEST:
+      return {
+        ...state,
+        isLoading: true,
+      };
+    case types.GET_MUSIC_DATA_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        Music: payload,
+      };
+
+    case types.GET_MUSIC_DATA_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        Music: [],
+        isError: true,
+      };
+
+    case types.GET_SEARCH_DATA_REQUEST:
+      return {
+        ...state,
+        isLoading: true,
+      };
+    case types.GET_SEARCH_DATA_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        Search: payload,
+      };
+
+    case types.GET_SEARCH_DATA_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        Search: [],
+        isError: true,
+      };
     default:
       return state;
   }
