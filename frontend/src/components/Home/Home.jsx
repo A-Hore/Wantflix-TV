@@ -17,6 +17,7 @@ import Kids from "./Kids/Kids";
 import Drama from "./Drama/Drama";
 import Clitter from "./Clitter/Clitter";
 import Music from "./Music/Music";
+import Homec from "./MiniBanner/Homec";
 
 
 
@@ -25,7 +26,7 @@ const Home = () => {
   return (
     <div>
       <AutoPlay />
-    
+      <Homec/>
       <Trending />
       <hr className="colourhr" />
       <Popular />
