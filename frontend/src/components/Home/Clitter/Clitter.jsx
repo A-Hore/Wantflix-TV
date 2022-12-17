@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getclitterData } from "../../../Redux/AppReducer/action";
 import { Link } from "react-router-dom";
 import "../Trending/Trending.css";
+import Loading from "../../Loading/Loading";
 const Clitter = () => {
   const dispatch = useDispatch();
   const Clitter_data = useSelector((state) => state.AppReducer.Clitter);
@@ -16,7 +17,7 @@ const Clitter = () => {
       <h1 className="Watchfree">Clitter shows</h1>
 
       <div className="TrendingDiv">
-        {isLoading && <h1>Loading....</h1>}
+      {isLoading && <Loading />}
         {Clitter_data.length > 0 &&
           Clitter_data.map((item) => {
             return (

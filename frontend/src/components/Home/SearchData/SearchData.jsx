@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getSearchData } from "../../../Redux/AppReducer/action";
 import { Link } from "react-router-dom";
 import "../Trending/Trending.css";
+import Loading from "../../Loading/Loading";
 const Search = () => {
   const dispatch = useDispatch();
   const Music_data = useSelector((state) => state.AppReducer.Search);
@@ -16,7 +17,7 @@ const Search = () => {
       {/* <h1 className="Watchfree">Music collections</h1> */}
 
       <div className="TrendingDiv">
-        {isLoading && <h1>Loading....</h1>}
+        {isLoading && <Loading />}
         {Music_data.length > 0 &&
           Music_data.map((item) => {
             return (
