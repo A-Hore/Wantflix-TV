@@ -1,35 +1,34 @@
-import axios from "axios";
+import "./login.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
-export default function Login() {
-  const navigate=useNavigate();
+import axios from "axios";
+export default function Signup() {
+  const navigate = useNavigate();
+  const [name, setName] = useState("");
   const [password, setPass] = useState("");
   const [email, setEmail] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (password.length > 2 && email.length > 10) {
-      let data = { email, password };
-      console.log(data);
+    if (name.length > 2 && password.length > 7 && email.length > 9) {
+      let data = { name, email, password };
       axios
-        .post("https://troubled-slip-lion.cyclic.app/login", data)
+        .post("https://troubled-slip-lion.cyclic.app/signup", data)
         .then((res) => {
-          if(res.data.msg==="Login successfull"){
-            // console.log(res.data)
-            alert('Login successfull')
-          }else{
-            alert("Login failed")
+          if (res.data === "user already present") {
+            alert("User Allready");
+          } else if (res.data === "sign up successfully") {
+            alert("Signup Successfull");
+            navigate("/");
           }
         })
         .catch((err) => {
-          alert("Login Failed")
-          // console.log(err);
+          console.log(err);
         });
     } else {
-      alert("fill the fiels ");
+      alert("Please fill all the fields");
     }
   };
-
   return (
     <div className="s-container">
       <div className="wrapper">
@@ -41,45 +40,45 @@ export default function Login() {
         </div>
         <div className="text-center mt-4 name">Wantflix</div>
         <form className="p-3 mt-3">
-          {/* email input */}
-
           <div className="form-field d-flex align-items-center">
             <span className="far fa-user"></span>
             <input
-              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              type="text"
+              name="Name"
+              id="userName"
+              placeholder="Name"
+            />
+          </div>
+          <div className="form-field d-flex align-items-center">
+            <span className="far fa-user"></span>
+            <input
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              type="email"
+              type="text"
               name="email"
-              id="userName"
+              id="Email"
               placeholder="Email"
             />
           </div>
-
-          {/* password input */}
-
           <div className="form-field d-flex align-items-center">
             <span className="fas fa-key"></span>
             <input
-              required
               value={password}
               onChange={(e) => setPass(e.target.value)}
-              type="text"
+              type="password"
               name="password"
               id="pwd"
               placeholder="Password"
             />
           </div>
-          <button
-            onClick={(e) => handleSubmit(e)}
-            type="submit"
-            className="btn mt-3"
-          >
-            Login
+          <button onClick={(e) => handleSubmit(e)} className="btn mt-3">
+            Signup
           </button>
         </form>
         <div className="text-center fs-6 cont">
-          <Link to="/signup">New here? &nbsp; Signup</Link>
+          <Link to="/login">Alleady a user? &nbsp;login</Link>
         </div>
       </div>
     </div>
