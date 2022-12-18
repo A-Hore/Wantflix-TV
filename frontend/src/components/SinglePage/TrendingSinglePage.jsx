@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getTrendingData } from "../.././Redux/AppReducer/action";
+import ReactVideoplayer from "../Home/Videoplayer/Videoplayer";
 import "./SinglePage.css";
 const SinglePage = () => {
   const { _id } = useParams();
@@ -29,11 +30,12 @@ const SinglePage = () => {
           You'r Watching Now :- {currentTrending?.Title}-: Movie
         </h2>
         <div>
-          <img
+        <ReactVideoplayer/>
+          {/* <img
             className="Poster"
             src={`${currentTrending.Poster}`}
             alt="Cover Pic"
-          />
+          /> */}
         </div>
         <div className="RelatedFilms">
           <div>
