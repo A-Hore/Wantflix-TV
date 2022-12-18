@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getKidsData } from "../../../Redux/AppReducer/action";
 import { Link } from "react-router-dom";
 import "../Trending/Trending.css";
+import Loading from "../../Loading/Loading";
 const Kids = () => {
   const dispatch = useDispatch();
   const Kids_data = useSelector((state) => state.AppReducer.Kids);
@@ -16,13 +17,13 @@ const Kids = () => {
       <h1 className="Watchfree">Kids Movies</h1>
 
       <div className="TrendingDiv">
-        {isLoading && <h1>Loading....</h1>}
+      {isLoading && <Loading />}
         {Kids_data.length > 0 &&
           Kids_data.map((item) => {
             return (
               <div>
               
-                <Link to={`/Movies/${item._id}`}>
+                <Link to={`/Kids/${item._id}`}>
                   <img src={item.Poster} alt={item.Title} />
                 </Link>
               </div>

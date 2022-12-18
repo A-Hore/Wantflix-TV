@@ -1,86 +1,88 @@
+import axios from "axios";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
 export default function Login() {
-  return (
-    <>
-      <div className="login-wrap">
-        <div className="login-html">
-          <input id="tab-1" type="radio" name="tab" className="sign-in" checked />
-          <label for="tab-1" className="tab">
-            Sign In
-          </label>
-          <input id="tab-2" type="radio" name="tab" className="sign-up" />
-          <label for="tab-2" className="tab">
-            Sign Up
-          </label>
-          <div className="login-form">
-            <div className="sign-in-htm">
-              <div className="group">
-                <label for="user" className="label">
-                  Username
-                </label>
-                <input id="user" type="text" className="input" />
-              </div>
-              <div className="group">
-                <label for="pass" className="label">
-                  Password
-                </label>
-                <input
-                  id="pass"
-                  type="password"
-                  className="input"
-                  data-type="password"
-                />
-              </div>
-              <div className="group">
-                <input id="check" type="checkbox" className="check" />
-                <label for="check">
-                  <span className="icon"></span> Keep me Signed in
-                </label>
-              </div>
-              <div className="group">
-                <input type="submit" className="button" value="Sign In" />
-              </div>
-              <div className="hr"></div>
-              <div className="foot-lnk">
-                <a href="#forgot">Forgot Password?</a>
-              </div>
-            </div>
-            <div className="sign-up-htm">
-              <div className="group">
-                <label for="user" className="label">
-                  Username
-                </label>
-                <input id="user" type="text" className="input" />
-              </div>
-              <div className="group">
-                <label for="pass" className="label">
-                  Password
-                </label>
-                <input
-                  id="pass"
-                  type="password"
-                  className="input"
-                  data-type="password"
-                />
-              </div>
+  const navigate=useNavigate();
+  const [password, setPass] = useState("");
+  const [email, setEmail] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (password.length > 2 && email.length > 10) {
+      let data = { email, password };
+      console.log(data);
+      axios
+        .post("https://troubled-slip-lion.cyclic.app/login", data)
+        .then((res) => {
+          if(res.data.msg==="Login successfull"){
+            // console.log(res.data)
+            alert('Login successfull')
+            navigate("/");
+          }else{
+            alert("Login failed")
+          }
+        })
+        .catch((err) => {
+          alert("Login Failed")
+          // console.log(err);
+        });
+    } else {
+      alert("fill the fiels ");
+    }
+  };
 
-              <div className="group">
-                <label for="pass" className="label">
-                  Email Address
-                </label>
-                <input id="pass" type="text" className="input" />
-              </div>
-              <div className="group">
-                <input type="submit" className="button" value="Sign Up" />
-              </div>
-              <div className="hr"></div>
-              <div className="foot-lnk">
-                <label for="tab-1">Already Member?</label>
-              </div>
-            </div>
+  return (
+    <div className="s-container">
+      <div className="wrapper">
+        <div className="logo">
+          <img
+            src="https://www.apple.com/v/apple-tv-plus/ae/images/meta/apple-tv__e7aqjl2rqzau_og.png"
+            alt=""
+          />
+        </div>
+        <div className="text-center mt-4 name">Wantflix</div>
+        <form className="p-3 mt-3">
+          {/* email input */}
+
+          <div className="form-field d-flex align-items-center">
+            <span className="far fa-user"></span>
+            <input
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              type="email"
+              name="email"
+              id="userName"
+              placeholder="Email"
+            />
           </div>
+
+          {/* password input */}
+
+          <div className="form-field d-flex align-items-center">
+            <span className="fas fa-key"></span>
+            <input
+              required
+              value={password}
+              onChange={(e) => setPass(e.target.value)}
+              type="text"
+              name="password"
+              id="pwd"
+              placeholder="Password"
+            />
+          </div>
+          <button
+            onClick={(e) => handleSubmit(e)}
+            type="submit"
+            className="btn mt-3"
+          >
+            Login
+          </button>
+        </form>
+        <div className="text-center fs-6 cont">
+          <Link to="/signup">New here? &nbsp; Signup</Link>
         </div>
       </div>
-    </>
+    </div>
   );
 }

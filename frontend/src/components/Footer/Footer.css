@@ -18,6 +18,7 @@
     text-align: center;
     color: white;
     word-break: break-word;
+    /* border: 2px solid red; */
   }
   
   .tv-logo {
@@ -141,3 +142,53 @@
   #footer-support_info {
     border-right: none;
   }
+
+
+
+  @media screen and (min-width: 320px) and (max-width: 480px){
+    .devices-info {
+      width: 90%;
+      /* border: 2px solid red; */
+    }
+    .devices-heading {
+      font-size: 23px;
+    
+    }
+    .devices-subheading {
+      font-size: 12px;
+    }
+    .dev-info {
+      font-size: 14px;
+    }
+    .dev-cat {
+      font-size: 11px;
+      margin: 0.2rem 0.1rem;
+    }
+    .dev-list {
+      font-size: 9px;
+    }
+  }
+  
+  @media screen and (min-width: 481px) and (max-width: 767px){
+    .devices-info {
+      width: 80%;
+      /* border: 2px solid red; */
+    }
+    .devices-heading {
+      font-size: 28px;
+    
+    }
+    .devices-subheading {
+      font-size: 16px;
+    }
+    .dev-info {
+      font-size: 15px;
+    }
+    .dev-cat {
+      font-size: 13px;
+    }
+    .dev-list {
+      font-size: 10px;
+    }
+  }
+  

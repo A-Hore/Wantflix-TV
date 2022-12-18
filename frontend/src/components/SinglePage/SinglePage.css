@@ -1,3 +1,7 @@
+.Single {
+  /* border: 1px solid red; */
+  background-color: rgba(0, 0, 0, 0.523);
+}
 .Poster {
   width: 100%;
 }
@@ -5,6 +9,7 @@
   text-align: center;
   font-size: 35px;
   font-weight: 600;
+  color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -13,9 +18,21 @@
   width: 90%;
   margin: auto;
   justify-content: space-between;
-  /* border: 1px solid red; */
   margin-top: 10px;
   padding: 25px;
+  color: white;
+}
+.RelatedFilms > div {
+  border: 0.2px solid rgba(0, 0, 0, 0.45);
+  width: 400px;
+  height: 180px;
+  text-align: center;
+  /* padding: 80px; */
+  /* background-color: rgba(0, 0, 0, 0.269); */
+  /* border-radius: 8%; */
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  background-color: rgba(115, 114, 115, 0.61);
+  /* background-color: rgba(0, 0, 0, 0.88); */
 }
 .RelatedFilms > div > h1 {
   color: black;
@@ -23,15 +40,16 @@
   margin-top: 20px;
   display: flex;
   font-size: 25px;
-  color: red;
-  justify-content: flex-start;
+  color: White;
+  justify-content: center;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
 }
 .RelatedFilms > div > p {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   /* border: 1px solid red; */
+  align-items: center;
   font-weight: 400;
   font-size: 20px;
   /* font-family: "Courier New", Courier, monospace; */
@@ -39,12 +57,18 @@
 }
 .About {
   width: 90%;
-  margin: auto;
   font-size: 20px;
   /* border: 1px solid red; */
+  color: white;
+  margin-left: 6.5%;
+  width: 35%;
   display: flex;
+  padding: 40px;
   justify-content: flex-start;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: rgba(115, 114, 115, 0.61);
+  /* border-radius: 9%; */
+  margin-top: 35px;
 }
 .ActorsProfile {
   display: grid;
@@ -62,10 +86,10 @@
   margin: auto;
   display: flex;
   font-size: 25px;
-  color: red;
+  color: white;
   justify-content: flex-start;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   margin-top: 50px;
 }
 
@@ -104,6 +128,14 @@
     gap: 50px;
     padding: 50px;
   }
+  .RelatedFilms > div {
+    border: 0.2px solid rgba(0, 0, 0, 0.45);
+    width: 250px;
+    height: 200px;
+    text-align: center;
+    /* border: 1px solid red; */
+    background-color: rgba(115, 114, 115, 0.61);
+  }
 }
 @media screen and (min-width: 481px) and (max-width: 780px) {
   .Title {
@@ -121,6 +153,14 @@
     /* border: 1px solid red; */
     margin-top: 10px;
     padding: 25px;
+  }
+  .RelatedFilms > div {
+    border: 0.2px solid rgba(0, 0, 0, 0.45);
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    /* border: 1px solid red; */
+    background-color: rgba(115, 114, 115, 0.61);
   }
   .About {
     width: 90%;

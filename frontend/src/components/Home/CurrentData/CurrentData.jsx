@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getCurrentData } from "../../../Redux/AppReducer/action";
+import Loading from "../../Loading/Loading";
 // import "../Trending.css";
 const CurrentData = () => {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const CurrentData = () => {
     <>
       <h1 className="Watchfree">Currents Hits and Future release</h1>
       <div className="TrendingDiv">
-        {isLoading && <h1>Loading....</h1>}
+      {isLoading && <Loading />}
         {Current_data.length > 0 &&
           Current_data.map((item) => {
             return (

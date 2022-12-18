@@ -10,6 +10,7 @@ import Original from "./Original/original";
 import Popular from "./MostPopular/Mostpopular";
 
 
+
 import { Footer } from "../Footer/Footer"
 
 import Kids from "./Kids/Kids";
@@ -25,11 +26,13 @@ import Homec from "./Upcomming/Homec";
 
 
 
+
 const Home = () => {
   return (
     <div>
       <AutoPlay />
        <Homec />
+
       <Trending />
       <hr className="colourhr" />
       <Popular />
@@ -38,7 +41,10 @@ const Home = () => {
       <hr className="colourhr" />
       <ComedyData />
   
+
       <Minishowcase data={jumboSliderData}/>
+
+
       <FutureReleased />
       <hr className="colourhr" />
     

@@ -62,7 +62,7 @@
     /* border: 1px solid red; */
     background-color: rgb(115,114,115);
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 21px;
     padding: 25px;
     color: white;
