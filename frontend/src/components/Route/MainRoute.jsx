@@ -15,6 +15,7 @@ import KidsSingle from "../SinglePage/KidsSingle";
 import MusicSingle from "../SinglePage/MusicSingle";
 import Search from "../Home/SearchData/SearchData";
 import SearchSingle from "../SinglePage/SearchSingle";
+import Signup from "../Login/Signup";
 const MainRoute = () => {
   return (
     <Routes>
