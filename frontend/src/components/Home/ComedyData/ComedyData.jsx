@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getComedyData } from "../../../Redux/AppReducer/action";
+import Loading from "../../Loading/Loading";
 // import "../Trending.css";
 const ComedyData = () => {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const ComedyData = () => {
     <>
       <h1 className="Watchfree">All Comedy series watch</h1>
       <div className="TrendingDiv">
-        {isLoading && <h1>Loading....</h1>}
+      {isLoading && <Loading />}
         {Comedy_data.length > 0 &&
           Comedy_data.map((item) => {
             return (
