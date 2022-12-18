@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getOriginalData } from "../../../Redux/AppReducer/action";
+import Loading from "../../Loading/Loading";
 import "../Trending/Trending.css";
 const Original = () => {
   const dispatch = useDispatch();
@@ -16,7 +17,7 @@ const Original = () => {
       <h1 className="Watchfree">Latest Originals released</h1>
      
       <div className="TrendingDiv">
-        {isLoading && <h1>Loading....</h1>}
+      {isLoading && <Loading />}
         {Original_data.length > 0 &&
           Original_data.map((item) => {
             return (

@@ -33,7 +33,6 @@ const MusicSingle = () => {
           <img
             className="Poster"
             src={`${currentTrending.Poster}`}
-            // src={Defending}
             alt="Cover Pic"
           />
         </div>
@@ -53,10 +52,11 @@ const MusicSingle = () => {
           <div>
             <h1>Accessibility</h1>
             <p>Country: {currentTrending?.Country}</p>
+            <p>Actors: {currentTrending?.Actors}</p>
           </div>
         </div>
 
-        <p className="About">About: {currentTrending?.Plot}</p>
+        <p className="About">ABOUT: {currentTrending?.Plot}</p>
       </div>
       <h1 className="Cast">Cast & Crew</h1>
       <div className="ActorsProfile">

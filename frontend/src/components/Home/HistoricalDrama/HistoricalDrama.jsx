@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getHistoricalData } from "../../../Redux/AppReducer/action";
+import Loading from "../../Loading/Loading";
 // import "../Trending.css";
 const Historical = () => {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const Historical = () => {
     <>
       <h1 className="Watchfree">Historical Release Movies</h1>
       <div className="TrendingDiv">
-        {isLoading && <h1>Loading....</h1>}
+      {isLoading && <Loading />}
         {Historical_data.length > 0 &&
           Historical_data.map((item) => {
             return (

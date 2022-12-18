@@ -10,14 +10,14 @@ import Original from "./Original/original";
 import Popular from "./MostPopular/Mostpopular";
 
 
-import { jumboSliderData } from "./MiniBanner/Data";
+
 import { Footer } from "../Footer/Footer"
-import MiniBanner from "./MiniBanner/MiniBanner";
+
 import Kids from "./Kids/Kids";
 import Drama from "./Drama/Drama";
 import Clitter from "./Clitter/Clitter";
 import Music from "./Music/Music";
-import Homec from "./MiniBanner/Homec";
+
 
 
 
@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <div>
       <AutoPlay />
-      <Homec/>
+     
       <Trending />
       <hr className="colourhr" />
       <Popular />
@@ -35,7 +35,7 @@ const Home = () => {
       <hr className="colourhr" />
       <ComedyData />
   
-      <MiniBanner data={jumboSliderData} />
+      {/* <MiniBanner data={jumboSliderData} /> */}
       <FutureReleased />
       <hr className="colourhr" />
     

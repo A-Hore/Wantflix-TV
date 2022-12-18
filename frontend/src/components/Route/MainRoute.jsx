@@ -2,7 +2,6 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "../Home/Home";
 import Login from "../Login/Login";
-// import Search from "../Search/Search";
 import ComedySingle from "../SinglePage/ComedySingle";
 import CurrentSingle from "../SinglePage/CurrentSingle";
 import FutureSingle from "../SinglePage/FutureSingle";
@@ -21,6 +20,7 @@ const MainRoute = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup/>} />
       <Route path="/search" element={<Search />} />
       <Route path="/Movies/:_id" element={<SinglePage />} />
       <Route path="/Popular/:_id" element={<PopularSinglePage />} />

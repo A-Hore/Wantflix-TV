@@ -13,6 +13,7 @@ signupRouter.post("/", async (req, res) => {
     // } else {
     //   await new UserModel({ name, password, email }).save();
     //   res.send("sign up successfully");
+    //   res.send("sign up successfully");
     // }
   } catch (err) {
     res.send({msg:"error while signup"});

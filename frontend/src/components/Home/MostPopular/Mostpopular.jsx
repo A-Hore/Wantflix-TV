@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getPopularData } from "../../../Redux/AppReducer/action";
+import Loading from "../../Loading/Loading";
 import "../Trending/Trending.css";
 
 const Popular = () => {
@@ -16,7 +17,7 @@ const Popular = () => {
     <>
       <h1 className="Watchfree"> Most Popular Series</h1>
       <div className="TrendingDiv">
-        {isLoading && <h1>Loading....</h1>}
+      {isLoading && <Loading/>}
         {Popular_data.length > 0 &&
           Popular_data.map((item) => {
             return (
