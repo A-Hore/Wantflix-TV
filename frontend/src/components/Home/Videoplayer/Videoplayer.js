@@ -13,7 +13,7 @@ const ReactVideoplayer = () => {
     <Video 
   
     poster={Black}
-    style={{"width":"750px","height":"500px"}}
+    style={{"width":"900px","height":"550px","margin":"auto","marginTop":"15px"}}
     controls={['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen','muted'
    ,'loop','autoPlay muted',
      ]}

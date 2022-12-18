@@ -17,11 +17,12 @@ import Kids from "./Kids/Kids";
 import Drama from "./Drama/Drama";
 import Clitter from "./Clitter/Clitter";
 import Music from "./Music/Music";
-import { jumboSliderData } from "./Data/Data";
+
 
 
 import Minishowcase from "./Minishowcase/Minishowcase";
 import Homec from "./Upcomming/Homec";
+import { jumboSliderData } from "./Data/Data";
 
 
 
