@@ -2,11 +2,6 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "../Home/Home";
 import Login from "../Login/Login";
-
-import Signup from "../Login/Signup";
-
-
-
 import ComedySingle from "../SinglePage/ComedySingle";
 import CurrentSingle from "../SinglePage/CurrentSingle";
 import FutureSingle from "../SinglePage/FutureSingle";

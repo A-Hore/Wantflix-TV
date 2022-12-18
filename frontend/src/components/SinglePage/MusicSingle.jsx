@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { getFeatureReleasedData } from "../.././Redux/AppReducer/action";
+import { getmusicData } from "../.././Redux/AppReducer/action";
 import "./SinglePage.css";
-const FutureSingle = () => {
+// import { Defending } from "./video";
+const MusicSingle = () => {
   const { _id } = useParams();
   const dispatch = useDispatch();
-  const Comedy_data = useSelector((state) => state.AppReducer.Featured);
-
+  const Comedy_data = useSelector((state) => state.AppReducer.Music);
   console.log("Trend", Comedy_data);
   const [currentTrending, setCurrentTrending] = useState({});
 
   useEffect(() => {
     if (Comedy_data.length === 0) {
-      dispatch(getFeatureReleasedData());
+      dispatch(getmusicData());
     }
   }, [Comedy_data.length, dispatch]);
 
@@ -107,4 +107,4 @@ const FutureSingle = () => {
   );
 };
 
-export default FutureSingle;
+export default MusicSingle;

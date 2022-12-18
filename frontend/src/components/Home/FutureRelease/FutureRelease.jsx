@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getFeatureReleasedData } from "../../../Redux/AppReducer/action";
+import Loading from "../../Loading/Loading";
 // import "../Trending.css";
 const FutureReleased = () => {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const FutureReleased = () => {
     <>
       <h1 className="Watchfree">Watch Entire seasons upcomming</h1>
       <div className="TrendingDiv">
-        {isLoading && <h1>Loading....</h1>}
+      {isLoading && <Loading />}
         {Featured_data.length > 0 &&
           Featured_data.map((item) => {
             return (

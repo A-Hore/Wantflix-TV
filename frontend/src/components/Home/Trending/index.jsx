@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getTrendingData } from "../../../Redux/AppReducer/action";
 import { Link } from "react-router-dom";
 import "./Trending.css";
+import Loading from "../../Loading/Loading";
 const Trending = () => {
   const dispatch = useDispatch();
   const Trending_data = useSelector((state) => state.AppReducer.Trending);
@@ -13,16 +14,15 @@ const Trending = () => {
   }, [dispatch]);
   return (
     <>
-    {/* <hr className="colourh" /> */}
+      {/* <hr className="colourh" /> */}
       <h1 className="Watchfree">Watch Premium and Trending Movies for Free </h1>
-      
+
       <div className="TrendingDiv">
-        {isLoading && <h1>Loading....</h1>}
+        {isLoading && <Loading />}
         {Trending_data.length > 0 &&
           Trending_data.map((item) => {
             return (
               <div>
-              
                 <Link to={`/Movies/${item._id}`}>
                   <img src={item.Poster} alt={item.Title} />
                 </Link>
