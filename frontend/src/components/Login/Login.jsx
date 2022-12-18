@@ -17,6 +17,7 @@ export default function Login() {
           if(res.data.msg==="Login successfull"){
             // console.log(res.data)
             alert('Login successfull')
+            navigate("/");
           }else{
             alert("Login failed")
           }
