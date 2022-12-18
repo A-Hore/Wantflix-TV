@@ -7,7 +7,7 @@ import Loading from "../../Loading/Loading";
 const Search = () => {
   const dispatch = useDispatch();
   const Music_data = useSelector((state) => state.AppReducer.Search);
-  console.log(Music_data);
+  // console.log(Music_data);
   const isLoading = useSelector((state) => state.AppReducer.isLoading);
   useEffect(() => {
     dispatch(getSearchData);

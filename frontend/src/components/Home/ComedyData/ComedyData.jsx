@@ -7,7 +7,7 @@ import Loading from "../../Loading/Loading";
 const ComedyData = () => {
   const dispatch = useDispatch();
   const Comedy_data = useSelector((state) => state.AppReducer.Comedy);
-  console.log(Comedy_data);
+  // console.log(Comedy_data);
   const isLoading = useSelector((state) => state.AppReducer.isLoading);
   useEffect(() => {
     dispatch(getComedyData);
@@ -20,7 +20,7 @@ const ComedyData = () => {
         {Comedy_data.length > 0 &&
           Comedy_data.map((item) => {
             return (
-              <Link to={`/Comedy/${item._id}`}>
+              <Link key={item._id} to={`/Comedy/${item._id}`}>
                 <img src={item.Poster} alt={item.Title} />
               </Link>
             );

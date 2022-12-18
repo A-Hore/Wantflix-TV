@@ -7,7 +7,7 @@ import "../Trending/Trending.css";
 const Original = () => {
   const dispatch = useDispatch();
   const Original_data = useSelector((state) => state.AppReducer.Original);
-  console.log(Original_data);
+  // console.log(Original_data);
   const isLoading = useSelector((state) => state.AppReducer.isLoading);
   useEffect(() => {
     dispatch( getOriginalData );
@@ -21,7 +21,7 @@ const Original = () => {
         {Original_data.length > 0 &&
           Original_data.map((item) => {
             return (
-              <Link to={`Original/${item._id}`}>
+              <Link key={item._id} to={`Original/${item._id}`}>
                 <img src={item.Poster} alt={item.Title} />
               </Link>
             );

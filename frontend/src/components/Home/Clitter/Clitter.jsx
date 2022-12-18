@@ -7,7 +7,7 @@ import Loading from "../../Loading/Loading";
 const Clitter = () => {
   const dispatch = useDispatch();
   const Clitter_data = useSelector((state) => state.AppReducer.Clitter);
-  console.log(Clitter_data);
+  // console.log(Clitter_data);
   const isLoading = useSelector((state) => state.AppReducer.isLoading);
   useEffect(() => {
     dispatch(getclitterData);
@@ -21,7 +21,7 @@ const Clitter = () => {
         {Clitter_data.length > 0 &&
           Clitter_data.map((item) => {
             return (
-              <div>
+              <div key={item._id}>
                 <Link to={`/Clitter/${item._id}`}>
                   <img src={item.Poster} alt={item.Title} />
                 </Link>

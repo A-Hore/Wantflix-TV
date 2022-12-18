@@ -80,7 +80,7 @@ export default function Minishowcase({ data }) {
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {data.map((card, index) => (
             <Box
-              key={index}
+              key={card.image}
               height={"lg"}
               position="relative"
               backgroundPosition="center"

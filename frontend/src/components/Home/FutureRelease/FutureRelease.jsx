@@ -7,7 +7,7 @@ import Loading from "../../Loading/Loading";
 const FutureReleased = () => {
   const dispatch = useDispatch();
   const Featured_data = useSelector((state) => state.AppReducer.Featured);
-  console.log(Featured_data);
+  // console.log(Featured_data);
   const isLoading = useSelector((state) => state.AppReducer.isLoading);
   useEffect(() => {
     dispatch(getFeatureReleasedData);
@@ -20,7 +20,7 @@ const FutureReleased = () => {
         {Featured_data.length > 0 &&
           Featured_data.map((item) => {
             return (
-              <Link to={`Future/${item._id}`}>
+              <Link key={item._id} to={`Future/${item._id}`}>
                 <img src={item.Poster} alt={item.Title} />
               </Link>
             );

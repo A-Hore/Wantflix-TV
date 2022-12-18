@@ -7,7 +7,7 @@ import Loading from "../../Loading/Loading";
 const Music = () => {
   const dispatch = useDispatch();
   const Music_data = useSelector((state) => state.AppReducer.Music);
-  console.log(Music_data);
+  // console.log(Music_data);
   const isLoading = useSelector((state) => state.AppReducer.isLoading);
   useEffect(() => {
     dispatch(getmusicData);
@@ -21,7 +21,7 @@ const Music = () => {
         {Music_data.length > 0 &&
           Music_data.map((item) => {
             return (
-              <div>
+              <div key={item._id}>
                 <Link to={`/Music/${item._id}`}>
                   <img src={item.Poster} alt={item.Title} />
                 </Link>

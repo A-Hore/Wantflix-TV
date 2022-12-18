@@ -7,7 +7,7 @@ import Loading from "../../Loading/Loading";
 const Drama = () => {
   const dispatch = useDispatch();
   const Drama_data = useSelector((state) => state.AppReducer.Drama);
-  console.log(Drama_data);
+  // console.log(Drama_data);
   const isLoading = useSelector((state) => state.AppReducer.isLoading);
   useEffect(() => {
     dispatch(getdramaData);
@@ -21,7 +21,7 @@ const Drama = () => {
         {Drama_data.length > 0 &&
           Drama_data.map((item) => {
             return (
-              <div>
+              <div key={item._id}>
                 <Link to={`/Drama/${item._id}`}>
                   <img src={item.Poster} alt={item.Title} />
                 </Link>

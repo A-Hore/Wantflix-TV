@@ -7,7 +7,7 @@ import Loading from "../../Loading/Loading";
 const Historical = () => {
   const dispatch = useDispatch();
   const Historical_data = useSelector((state) => state.AppReducer.Historical);
-  console.log(Historical_data);
+  // console.log(Historical_data);
   const isLoading = useSelector((state) => state.AppReducer.isLoading);
   useEffect(() => {
     dispatch(getHistoricalData);
@@ -20,7 +20,7 @@ const Historical = () => {
         {Historical_data.length > 0 &&
           Historical_data.map((item) => {
             return (
-              <Link to={`Historical/${item._id}`}>
+              <Link key={item._id} to={`Historical/${item._id}`}>
                 <img src={item.Poster} alt={item.Title} />
               </Link>
             );

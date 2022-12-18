@@ -8,7 +8,7 @@ import "../Trending/Trending.css";
 const Popular = () => {
   const dispatch = useDispatch();
   const Popular_data = useSelector((state) => state.AppReducer.Popular);
-  console.log(Popular_data);
+  // console.log(Popular_data);
   const isLoading = useSelector((state) => state.AppReducer.isLoading);
   useEffect(() => {
     dispatch(getPopularData);
@@ -21,7 +21,7 @@ const Popular = () => {
         {Popular_data.length > 0 &&
           Popular_data.map((item) => {
             return (
-              <div>
+              <div key={item._id}>
                 <Link to={`/Popular/${item._id}`}>
                   <img src={item.Poster} alt={item.Title} />
                 </Link>

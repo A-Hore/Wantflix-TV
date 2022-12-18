@@ -7,7 +7,7 @@ import Loading from "../../Loading/Loading";
 const Kids = () => {
   const dispatch = useDispatch();
   const Kids_data = useSelector((state) => state.AppReducer.Kids);
-  console.log(Kids_data);
+  // console.log(Kids_data);
   const isLoading = useSelector((state) => state.AppReducer.isLoading);
   useEffect(() => {
     dispatch(getKidsData);
@@ -21,7 +21,7 @@ const Kids = () => {
         {Kids_data.length > 0 &&
           Kids_data.map((item) => {
             return (
-              <div>
+              <div key={item._id}>
               
                 <Link to={`/Kids/${item._id}`}>
                   <img src={item.Poster} alt={item.Title} />

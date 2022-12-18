@@ -7,7 +7,7 @@ import Loading from "../../Loading/Loading";
 const Trending = () => {
   const dispatch = useDispatch();
   const Trending_data = useSelector((state) => state.AppReducer.Trending);
-  console.log(Trending_data);
+  // console.log(Trending_data);
   const isLoading = useSelector((state) => state.AppReducer.isLoading);
   useEffect(() => {
     dispatch(getTrendingData);
@@ -22,10 +22,9 @@ const Trending = () => {
         {Trending_data.length > 0 &&
           Trending_data.map((item) => {
             return (
-              <div>
+              <div key={item._id}>
                 <Link to={`/Movies/${item._id}`}>
                   <img src={item.Poster} alt={item.Title} />
-                
                 </Link>
               </div>
             );

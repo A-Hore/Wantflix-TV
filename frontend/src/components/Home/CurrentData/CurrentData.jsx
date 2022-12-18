@@ -7,7 +7,7 @@ import Loading from "../../Loading/Loading";
 const CurrentData = () => {
   const dispatch = useDispatch();
   const Current_data = useSelector((state) => state.AppReducer.Current);
-  console.log(Current_data);
+  // console.log(Current_data);
   const isLoading = useSelector((state) => state.AppReducer.isLoading);
   useEffect(() => {
     dispatch(getCurrentData);
@@ -20,7 +20,7 @@ const CurrentData = () => {
         {Current_data.length > 0 &&
           Current_data.map((item) => {
             return (
-              <Link to={`/Current/${item._id}`}>
+              <Link key={item._id} to={`/Current/${item._id}`}>
                 <img src={item.Poster} alt={item.Title} />
               </Link>
             );
