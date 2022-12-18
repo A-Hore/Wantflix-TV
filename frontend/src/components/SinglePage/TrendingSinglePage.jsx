@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getTrendingData } from "../.././Redux/AppReducer/action";
 
+import ReactVideoplayer from "../Home/Videoplayer/Videoplayer";
+
 import "./SinglePage.css";
 const SinglePage = () => {
   const { _id } = useParams();
@@ -31,6 +33,9 @@ const SinglePage = () => {
           
         </h2>
         <div>
+
+        <ReactVideoplayer/>
+
           {/* <img
             className="Poster"
             src={`${currentTrending.Poster}`}
