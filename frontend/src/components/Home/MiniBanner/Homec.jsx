@@ -6,7 +6,7 @@ import { comingSoon } from "./Data";
 
 function Homec() {
   return (
-    <Box top="5px" mt={6}>
+    <Box  mt={4}>
 
       <CardCarousel
         data={comingSoon}

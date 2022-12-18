@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getTrendingData } from "../.././Redux/AppReducer/action";
+
 import "./SinglePage.css";
 const SinglePage = () => {
   const { _id } = useParams();
@@ -27,13 +28,14 @@ const SinglePage = () => {
       <div>
         <h2 className="Title">
           You'r Watching Now :- {currentTrending?.Title}-: Movie
+          
         </h2>
         <div>
-          <img
+          {/* <img
             className="Poster"
             src={`${currentTrending.Poster}`}
             alt="Cover Pic"
-          />
+          /> */}
         </div>
         <div className="RelatedFilms">
           <div>

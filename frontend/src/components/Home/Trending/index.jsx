@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getTrendingData } from "../../../Redux/AppReducer/action";
 import { Link } from "react-router-dom";
 import "./Trending.css";
+
+
 const Trending = () => {
   const dispatch = useDispatch();
   const Trending_data = useSelector((state) => state.AppReducer.Trending);
@@ -23,8 +25,10 @@ const Trending = () => {
             return (
               <div>
               
-                <Link to={`/Movies/${item._id}`}>
+                <Link 
+                to={`/Movies/${item._id}`}>
                   <img src={item.Poster} alt={item.Title} />
+                
                 </Link>
               </div>
             );
