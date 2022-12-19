@@ -1,33 +1,24 @@
 .TrendingDiv {
-  /* border: 1px solid red; */
   background-color: rgb(115,114,115);
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 21px;
   padding: 25px;
   margin-top: 2px;
-    /* border: 1px solid red; */
   color: whitesmoke;
 }
 .TrendingDiv > div {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  /* border: 1px solid red; */ 
 }
-.TrendingDiv > div:hover {
-   /* background-color: red; */
-}
+
 
 .TrendingDiv > div > img {
   border-radius: 4%;
-  /* border: 1px solid red; */
   height: 160px;
   width: 1000px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-/* img:hover{
-  background-color: brown;
 
-} */
 .Watchfree {
   font-size: 18px;
   display: flex;
@@ -40,14 +31,10 @@
   font-weight: bold;
 }
 
-/* .colourh{
-  color: red;
-  margin-bottom: 10px;
-} */
+
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .TrendingDiv {
-    /* border: 1px solid red; */
     background-color: rgb(115,114,115);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -59,7 +46,6 @@
 
 @media screen and (min-width: 481px) and (max-width: 767px) {
   .TrendingDiv {
-    /* border: 1px solid red; */
     background-color: rgb(115,114,115);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
