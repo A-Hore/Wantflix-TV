@@ -1,50 +1,34 @@
- About
-Apple TV+ is a streaming service featuring Apple Originals 
-— award-winning series, compelling dramas, groundbreaking 
-documentaries, kids' entertainment, comedies, and more.
+## Welcome to WANTFLIX-TV
+
+Wantflix TV is a streaming service from initiated by Apple TV+. It features exclusive and Original shows and movies from some of the industry's top talent, with new premieres  
+
+## [Deployed URL](https://wantflix-shows.netlify.app/)
+
+## Landing Page 
+
+![image](https://i.postimg.cc/L8tNycRC/Screenshot-20221222-021223.png)
+
+## Upcomming Movies Banner
+![image](https://i.postimg.cc/76fRQKK5/Screenshot-20221222-021253.png)
 
 
-Tech Stacks 
+## Sliding carousel Section 
+
+![image](https://i.postimg.cc/MH1dhNVp/Screenshot-20221222-021324.png)
 
 
-For Frontend
+## Footer
+
+![image](https://i.postimg.cc/G3vKh0Tc/Screenshot-20221222-021347.png)
 
 
-HTML 
-CSS 
-Javascript 
-React 
-React-Redux
-React-thunk
-Chakra-Ui
-Bootstrap
+## Single Page Application
+
+![image](https://i.postimg.cc/fyM9Rr1L/Screenshot-20221222-021431.png)
 
 
+## Sign-up Page 
 
-For Backend
-
-Node.js
-express.js
-Mongo DB
-
-Json-server
+![image](https://i.postimg.cc/0yhKwQhh/Screenshot-20221222-021453.png)
 
 
-
-Responsibility
-
-HomePage 
-Navbar
-Middle Page
-footer 
-SinglePage
-Login 
-SignUp
-
-
-
-
-
-
-
-Netlify Link :-wantflix-shows.netlify.app/
