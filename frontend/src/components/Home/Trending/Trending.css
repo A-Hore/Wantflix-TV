@@ -17,6 +17,7 @@
   height: 160px;
   width: 1000px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* border: 1px solid red; */
 }
 
 .Watchfree {
@@ -24,7 +25,7 @@
   display: flex;
   justify-content: flex-start;
   margin-left: 2%;
-  margin-top: 10px;
+  margin-top: 9px;
  
   color: whitesmoke;
   font-family: sans-serif;

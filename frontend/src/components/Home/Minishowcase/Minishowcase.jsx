@@ -86,7 +86,7 @@ export default function Minishowcase({ data }) {
               backgroundPosition="center"
               backgroundRepeat="no-repeat"
               backgroundSize="cover"
-              borderRadius={50}
+              borderRadius={30}
               backgroundImage={`url(${card.image})`}
             ></Box>
           ))}
