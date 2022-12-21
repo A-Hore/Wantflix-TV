@@ -1,6 +1,6 @@
 ## Welcome to WANTFLIX-TV
 
-Wantflix TV is a streaming service from initiated by Apple TV+. It features exclusive and Original shows and movies from some of the industry's top talent, with new premieres  
+Wantflix TV website is a video streaming service from initiated by Apple TV+. It features exclusive and Original shows and movies from some of the industry's top talent, with new premieres  
 
 ## [Deployed URL](https://wantflix-shows.netlify.app/)
 
